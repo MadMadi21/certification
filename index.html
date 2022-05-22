@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="css/reset.css">
+   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+   <title>ТЕХПРОМСЕРТ</title>
+</head>
+<body>
+   <!-- header -->
+   <header class="header section-header">
+      <div class="container">
+         <div class="header__inner">
+            <div class="header__logo">
+               <img class="logo__link" src="img/src/logo.svg" alt="logo">
+            </div>
+
+            <nav class="menu">
+               <ul class="menu__list">
+                  <li class="'menu__list-item">
+                     <a class="menu-link menu-link--active" href="#">О компании</a>
+                  </li>
+                  <li class="'menu__list-item">
+                     <a class="menu-link" href="#">Преимущества</a>
+                  </li>
+                  <li class="'menu__list-item">
+                     <a class="menu-link" href="#">Наши услуги</a>
+                  </li>
+                  <li class="'menu__list-item">
+                     <a class="menu-link" href="#">Отзывы</a>
+                  </li>
+                  <li class="'menu__list-item">
+                     <a class="menu-link" href="#">FAQ</a>
+                  </li>
+                  <li class="'menu__list-item">
+                     <a class="menu-link" href="#">Контакты</a>
+                  </li>
+               </ul>
+            </nav>
+
+            <button class="header__call" type="button">Заказать обратный звонок</button>
+         </div>
+      </div>
+   </header> <!-- / header -->
+
+   <main>
+      <!-- intro -->
+      <section class="intro section--intro">
+         <div class="container">
+            <div class="intro__inner">
+               <h1 class="intro__title">section-Быстрая сертификация вашей продукции по низким ценам!</h1>
+               <h2 class="intro__subtitle">Поможем с оформлением разрешительных документов под ключ</h2>
+               <a class="btn btn--red" href="#">Бесплатная консультация</a>
+            </div>
+         </div>
+      </section> <!-- / intro  -->
+
+      <!-- offer -->
+      <section class="offer section-offer">
+         <div class="container">
+               <h3 class="title about__title">Рассчитать стоимость сертификата</h3>
+               <p class="calculate__subtitle">Отвечаем в течение 15 минут в рабочее время</p>
+            <form class="offer__form">
+               <h4>Информация о продукции</h4>
+               <div class="form__row">
+                  <div class="form__group select__wrapper">
+                     <label class="form__label" for="selectDoc">Необходимый документ</label>
+                     <select class="form__input select" id="selectDoc" name="select-doc" id="#">
+                        <option class="select__option" value="Добровольный сертификат соответствия ГОСТ Р">Добровольный
+                           сертификат
+                           соответствия ГОСТ Р</option>
+                        <option class="select__option" value="Сертификат соответствия Таможенного союза">Сертификат
+                           соответствия Таможенного
+                           союза</option>
+                        <option class="select__option" value="Отказное письмо по септификации">Отказное письмо по
+                           сертификации</option>
+                        <option class="select__option" value="Свидетельство о гос. регистрации продукции">
+                           Свидетельство о гос. регистрации
+                           продукции</option>
+                     </select>
+                     <!-- <select class="form__input" type="text"> -->
+                  </div>
+                  <div class="form__group">
+                     <label class="form__label" for="productsName">Наименование продукции</label>
+                     <input class="form__input" id="productsName" type="text" name="products_name">
+                  </div>
+                  <div class="form__group">
+                     <label class="form__label" for="country">Страна происхождения</label>
+                     <input class="form__input" id="country" type="text" name="country">
+                  </div>
+                  </div>
+
+                  <h3 class="form__title">Контактная информация</h3>
+                  <div class="form__row">
+                     <div class="form__group">
+                        <label class="form__label" for="name">Ваше имя*</label>
+                        <input class="form__input req" id="name" type="text" placeholder="Ваше имя" name="name">
+                     </div>
+                     <div class="form__group">
+                        <label class="form__label" for="phone"> Номер телефона*</label>
+                        <input class="form__input req" id="phone" type="tel" placeholder="Номер телефона" name="tel">
+                     </div>
+                     <div class="form__group">
+                        <label class="form__label" for="mail">Email*</label>
+                        <input class="form__input req email" id="mail" type="email" placeholder="Email" name="email">
+                     </div>
+                  </div>
+
+                  <div class="form__row">
+                     <div class="form__group group__btn">
+                        <button class="btn form__btn">Отправить</button>
+                        <label class="form__label checkbox__label" for="agreement"><span>Я даю свое согласие на
+                              <a class="checkbox__label-politic" href="#">обработку персональных
+                                 данных</a></span></label>
+                        <input checked class="checkbox__input req" id="agreement" type="checkbox" name="agreement">
+                     </div>
+                  </div>
+               </div>
+            </form>
+         </div>
+      </section> <!-- / offer -->
+
+      <!-- about -->
+      <section class="about section-about">
+         <div class="container">
+            <h3 class="title about__title">О компании</h3>
+            <div class="about__inner">
+               <img class="about__image" src="img/src/about.jpg" alt="О компании">
+               <div class="about__content">
+                  <p class="about__text">Мы являемся крупным многопрофильным центром по оформлению разрешительной
+                     документации, объединяющим как органы по сертификации, так и несколько испытательных лабораторий
+                     имеющих аттестат Федеральной службы аккредитации.</p>
+                  <p class="about__text">Наша компания специализируется на разработке и внедрении систем управления
+                     предприятиям, на базе стандартов ISO.</p>
+                  <p class="about__text">Оказываем полный комплекс услуг по экспертизе, стандартизации и сертификации
+                     услуг, продукции и оборудования, пожарной сертификации и оформлению других видов разрешительной
+                     документации любой степени сложности во всех странах Таможенного Союза.</p>
+               </div>
+
+            </div>
+         </div>
+      </section> <!-- / about -->
+
+      <!-- / numbers -->
+      <section class="numbers section-numbers">
+         <div class="container">
+            <div class="numbers__inner">
+               <div class="numbers__item">
+                  <div class="numbers__number">15</div>
+                  <p class="numbers__text">высококвалифицированных сотрудников</p>
+               </div>
+               <div class="numbers__item">
+                  <div class="numbers__number">55%</div>
+                  <p class="numbers__text">клиентов пришли к нам по рекомендации</p>
+               </div>
+               <div class="numbers__item">
+                  <div class="numbers__number">2890</div>
+                  <p class="numbers__text">выдано сертификатов</p>
+               </div>
+               <div class="numbers__item">
+                  <div class="numbers__number">1450</div>
+                  <p class="numbers__text">довольных клиентов</p>
+               </div>
+            </div>
+         </div>
+      </section> <!-- /.numbers -->
+
+      <!-- features -->
+      <section class="features section-features">
+         <div class="container">
+            <h3 class="title about__title">Наши преимущества</h3>
+            <div class="features__inner">
+               <div class="features__item">
+                  <img class="features__icon" src="img/src/law 1.svg" alt="">
+                  <p class="features__text">Официальное оформление на всей территории РФ</p>
+               </div>
+               <div class="features__item">
+                  <img class="features__icon" src="img/src/stopwatch.svg" alt="">
+                  <p class="features__text">10 лет на рынке сертификации</p>
+               </div>
+               <div class="features__item">
+                  <img class="features__icon" src="img/src/stamp.svg" alt="">
+                  <p class="features__text">Оформление документов от одного рабочего дня</p>
+               </div>
+               <div class="features__item">
+                  <img class="features__icon" src="img/src/cap.svg" alt="">
+                  <p class="features__text">Бесплатная помощь эксперта</p>
+               </div>
+            </div>
+         </div>
+      </section> <!-- / features -->
+
+      <!-- services -->
+      <section class="services section-services">
+         <h3 class="title about__title">Наши услуги</h3>
+         <div class="services__inner">
+            <div class="services__item">
+               <img class="services__img" src="img/step.jpg" alt="">
+               <div class="services__content">
+                  <div class="services__title">Сертификаты и декларации соответствия ТР ТС</div>
+               </div>
+            </div>
+            <div class="services__item">
+               <img class="services__img" src="img/step.jpg" alt="">
+               <div class="services__content">
+                  <h4 class="services__title">Сертификат ИСО</h4>
+               </div>
+            </div>
+            <div class="services__item">
+               <img class="services__img" src="img/step.jpg" alt="">
+               <div class="services__content">
+                  <h4 class="services__title">Государственная регистрация продукции</h4>
+               </div>
+            </div>
+            <div class="services__item">
+               <img class="services__img" src="img/step.jpg" alt="">
+               <h4 class="services__content">
+                  <div class="services__title">Отказное письмо</div>
+               </h4>
+            </div>
+            <div class="services__item">
+               <img class="services__img" src="img/step.jpg" alt="">
+               <div class="services__content">
+                  <h4 class="services__title">СТО (стандарт организации)</h4>
+               </div>
+            </div>
+            <div class="services__item">
+               <img class="services__img" src="img/step.jpg" alt="">
+               <div class="services__content">
+                  <h4 class="services__title">Технические условия на продукцию</h4>
+               </div>
+            </div>
+            <div class="services__item">
+               <img class="services__img" src="img/step.jpg" alt="">
+               <div class="services__content">
+                  <h4 class="services__title">Добровольный сертификат</h4>
+               </div>
+            </div>
+            <div class="services__item">
+               <img class="services__img" src="img/step.jpg" alt="">
+               <div class="services__content">
+                  <h4 class="services__title">Пожарный сертификат</h4>
+               </div>
+            </div>
+         </div>
+      </section> <!-- / services -->
+
+      <!-- testimonials -->
+      <section class="testimonials section-testimonials">
+         <div class="container">
+            <div class="testimonials__inner">
+
+               <div class="testimonials__carts">
+
+                  <ul class="slider-testimonials">
+                     <li class="slider-testimonials__item">
+                        <p class="slider-testimonials__item-text">Lorem ipsum dolor sit amet consectetur adipisicing
+                           elit.
+                           Temporibus, voluptatibus tempora autem ea sit soluta dicta provident quasi, aut ullam et
+                           velit perspiciatis.</p>
+                        <div class="slider-testimonials__item-photo">
+                           <img src="/img/quot.jpg" alt="">
+                        </div>
+                     </li>
+                  </ul>
+
+                  <ul class="dots">
+                     <li class="dots__item"></li>
+                     <li class="dots__item"></li>
+                     <li class="dots__item dots__item--active"></li>
+                     <li class="dots__item"></li>
+                     <li class="dots__item"></li>
+                     <li class="dots__item"></li>
+                     <li class="dots__item"></li>
+                     <li class="dots__item"></li>
+                  </ul>
+               </div>
+
+            </div>
+         </div>
+      </section> <!-- / testimonials -->
+
+      <!-- consultation -->
+      <section class="consultation section-consultation">
+         <div class="container">
+            <h3 class="title about__title">Отзывы</h3>
+            <div class="consultation__inner">
+               <h2 class="consultation__title">Получить консультацию специалиста</h2>
+               <p class="consultation__subtitle">Ответим на все ваши вопросы и подберем оптимальное решение</p>
+               <form class="consultation__form" id="'form" action="">
+                  <div class="form__row">
+                     <div class="form__group">
+                        <input class="form__input" type="text" placeholder="Ваше имя" name="name">
+                     </div>
+                     <div class="form__group">
+                        <input class="form__input req" type="tel" placeholder="Номер телефона" name="tel">
+                     </div>
+                     <div class="form__group consultation__btn">
+                        <button class="btn form__btn">Отправить</button>
+                     </div>
+                  </div>
+               </form>
+            </div>
+         </div>
+      </section> <!-- / consultation  -->
+
+      <!-- faq -->
+      <section class="faq section-faq">
+         <div class="container">
+            <div class="faq __inner">
+               <h3>Ответы на вопросы</h3>
+
+                  <ul class="faq-accordion">
+                     <li class="faq-accordion__item">
+                        <div class="faq-accordion__item-trigger">
+                           <div class="faq-accordion__item-trigger-icon">
+                              <svg width="20" height="14" viewBox="0 0 20 14" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                 <path class="faq-arrow"
+                                    d="M3.15233 1.43973C2.62199 0.803311 1.67614 0.717325 1.03972 1.24767C0.403309 1.77802 0.317323 2.72386 0.847669 3.36028L3.15233 1.43973ZM10 12L8.84767 12.9603C9.13266 13.3023 9.55483 13.5 10 13.5C10.4452 13.5 10.8673 13.3023 11.1523 12.9603L10 12ZM19.1523 3.36028C19.6827 2.72386 19.5967 1.77802 18.9603 1.24767C18.3239 0.717324 17.378 0.80331 16.8477 1.43973L19.1523 3.36028ZM0.847669 3.36028L8.84767 12.9603L11.1523 11.0397L3.15233 1.43973L0.847669 3.36028ZM11.1523 12.9603L19.1523 3.36028L16.8477 1.43973L8.84767 11.0397L11.1523 12.9603Z" />
+                              </svg>
+                           </div>
+                           <p class="faq-accordion__item-trigger-text">Как происходит процесс сотрудничества?</p>
+                        </div>
+                        <div class="faq-accordion__item-content">
+                           <p class="faq-accordion__item-content-text">Lorem ipsum dolor sit amet, consectetur
+                              adipisicing elit. Ratione dolorum beatae quas asperiores eveniet atque officiis velit omnis minima
+                              sunt.
+                           </p>
+                        </div>
+                     </li>
+
+                     <li class="faq-accordion__item">
+                        <div class="faq-accordion__item-trigger">
+                           <div class="faq-accordion__item-trigger-icon">
+                              <svg width="20" height="14" viewBox="0 0 20 14" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                 <path class="faq-arrow"
+                                    d="M3.15233 1.43973C2.62199 0.803311 1.67614 0.717325 1.03972 1.24767C0.403309 1.77802 0.317323 2.72386 0.847669 3.36028L3.15233 1.43973ZM10 12L8.84767 12.9603C9.13266 13.3023 9.55483 13.5 10 13.5C10.4452 13.5 10.8673 13.3023 11.1523 12.9603L10 12ZM19.1523 3.36028C19.6827 2.72386 19.5967 1.77802 18.9603 1.24767C18.3239 0.717324 17.378 0.80331 16.8477 1.43973L19.1523 3.36028ZM0.847669 3.36028L8.84767 12.9603L11.1523 11.0397L3.15233 1.43973L0.847669 3.36028ZM11.1523 12.9603L19.1523 3.36028L16.8477 1.43973L8.84767 11.0397L11.1523 12.9603Z" />
+                              </svg>
+                           </div>
+                           <p class="faq-accordion__item-trigger-text">Какие закрывающие документы вы предоставляете?</p>
+                        </div>
+                        <div class="faq-accordion__item-content">
+                           <p class="faq-accordion__item-content-text">Lorem ipsum dolor sit amet, consectetur
+                              adipisicing elit. Ratione dolorum beatae quas asperiores eveniet atque officiis velit omnis minima sunt.</p>
+                        </div>
+                     </li>
+
+                     <li class="faq-accordion__item">
+                        <div class="faq-accordion__item-trigger">
+                           <div class="faq-accordion__item-trigger-icon">
+                              <svg width="20" height="14" viewBox="0 0 20 14" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                 <path class="faq-arrow"
+                                    d="M3.15233 1.43973C2.62199 0.803311 1.67614 0.717325 1.03972 1.24767C0.403309 1.77802 0.317323 2.72386 0.847669 3.36028L3.15233 1.43973ZM10 12L8.84767 12.9603C9.13266 13.3023 9.55483 13.5 10 13.5C10.4452 13.5 10.8673 13.3023 11.1523 12.9603L10 12ZM19.1523 3.36028C19.6827 2.72386 19.5967 1.77802 18.9603 1.24767C18.3239 0.717324 17.378 0.80331 16.8477 1.43973L19.1523 3.36028ZM0.847669 3.36028L8.84767 12.9603L11.1523 11.0397L3.15233 1.43973L0.847669 3.36028ZM11.1523 12.9603L19.1523 3.36028L16.8477 1.43973L8.84767 11.0397L11.1523 12.9603Z" />
+                              </svg>
+                           </div>
+                           <p class="faq-accordion__item-trigger-text">Какой срок действия у сертификатов и деклараций?</p>
+                        </div>
+                        <div class="faq-accordion__item-content">
+                           <p class="faq-accordion__item-content-text">Lorem ipsum dolor sit amet, consectetur
+                              adipisicing elit. Ratione dolorum beatae quas asperiores eveniet atque officiis velit omnis minima sunt.</p>
+                        </div>
+                     </li>
+
+                     <li class="faq-accordion__item">
+                        <div class="faq-accordion__item-trigger">
+                           <div class="faq-accordion__item-trigger-icon">
+                              <svg width="20" height="14" viewBox="0 0 20 14" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                 <path class="faq-arrow"
+                                    d="M3.15233 1.43973C2.62199 0.803311 1.67614 0.717325 1.03972 1.24767C0.403309 1.77802 0.317323 2.72386 0.847669 3.36028L3.15233 1.43973ZM10 12L8.84767 12.9603C9.13266 13.3023 9.55483 13.5 10 13.5C10.4452 13.5 10.8673 13.3023 11.1523 12.9603L10 12ZM19.1523 3.36028C19.6827 2.72386 19.5967 1.77802 18.9603 1.24767C18.3239 0.717324 17.378 0.80331 16.8477 1.43973L19.1523 3.36028ZM0.847669 3.36028L8.84767 12.9603L11.1523 11.0397L3.15233 1.43973L0.847669 3.36028ZM11.1523 12.9603L19.1523 3.36028L16.8477 1.43973L8.84767 11.0397L11.1523 12.9603Z" />
+                              </svg>
+                           </div>
+                           <p class="faq-accordion__item-trigger-text">Срок изготовления сертификатов и деклараций?</p>
+                        </div>
+                        <div class="faq-accordion__item-content">
+                           <p class="faq-accordion__item-content-text">Lorem ipsum dolor sit amet, consectetur
+                              adipisicing elit. Ratione dolorum beatae quas asperiores eveniet atque officiis velit omnis minima sunt.</p>
+                        </div>
+                     </li>
+                  </ul>
+
+            </div>
+         </div>
+      </section><!-- / faq -->
+
+      <!-- contacts -->
+      <section class="contacts section-contacts">
+         <div class="container">
+            <h3>Как нас найти</h3>
+            <div class="contacts__inner">
+               <div class="contacts__content">
+                  <h4>Адрес офиса:</h4>
+                  <p class="contacts__text">г. Москва, Сормовский проезд, д. 11с1</p>
+
+               </div>
+               <div class="contacts__content">
+                  <h4>График работы:</h4>
+                  <p class="contacts__text">Пн-Пт 09.00 - 18.00</p>
+                  <p class="contacts__text">Сб-Вс Выходные</p>
+               </div>
+            </div>
+         </div>
+      </section> <!-- / contacts -->
+
+      <!-- map -->
+      <div class="map">
+      </div> <!-- / map -->
+
+      <!-- questions -->
+      <section class="questions section-questions">
+         <div class="container">
+            <div class="questions__inner">
+               <h4>Остались вопросы?</h4>
+               <a class="questions__link" href="#">Задайте их специалисту</a>
+            </div>
+         </div>
+      </section> <!-- /.questions -->
+      </main>
+
+      <footer class="footer section-footer">
+         <div class="container">
+            <div class="footer__inner">
+               <a href="#" class="logo footer__logo">
+                  <img src="img/src/logo_white.svg" alt="Logo">
+               </a>
+               <ul class="footer__list">
+                  <li class="footer__list-item"><a href="#">О нас</a></li>
+                  <li class="footer__list-item"><a href="#">Наши услуги</a></li>
+                  <li class="footer__list-item"><a href="#">Порядок работы</a></li>
+                  <li class="footer__list-item"><a href="#">Контакты</a></li>
+               </ul>
+               <button class="footer__call" type="button">Заказать обратный звонок</button>
+            </div>
+            <div class="footer__copyright">
+               <div class="copyright">
+                  Copyright 2022
+               </div>
+               <div class="socials">
+                  <ul class="socials-list">
+                     <li class="socials-list__item">
+                        <a class="socials-list__item socials-list__item-link" href="#" aria-label="Facebook">
+                           <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                 d="M9.55277 20V11.5539H7V8.51287H9.55277V5.91545C9.55277 3.87438 11.0607 2 14.5353 2C15.9421 2 16.9824 2.11799 16.9824 2.11799L16.9004 4.95778C16.9004 4.95778 15.8395 4.94874 14.6818 4.94874C13.4288 4.94874 13.228 5.45391 13.228 6.29237V8.51287H17L16.8359 11.5539H13.228V20H9.55277Z" />
+                           </svg>
+                        </a>
+                     </li>
+                     <li class="socials-list__item">
+                        <a class="socials-list__item socials-list__item-link" href="#" aria-label="Telegram">
+                           <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                 d="M17.2208 3.09759L2.44583 8.79509C1.4375 9.20009 1.44333 9.76259 2.26083 10.0134L6.05416 11.1968L14.8308 5.65926C15.2458 5.40676 15.625 5.54259 15.3133 5.81926L8.2025 12.2368H8.20083L8.2025 12.2376L7.94083 16.1476C8.32416 16.1476 8.49333 15.9718 8.70833 15.7643L10.5508 13.9726L14.3833 16.8034C15.09 17.1926 15.5975 16.9926 15.7733 16.1493L18.2892 4.29259C18.5467 3.26009 17.895 2.79259 17.2208 3.09759V3.09759Z" />
+                           </svg>
+                        </a>
+                     </li>
+                     <li class="socials-list__item">
+                        <a class="socials-list__item socials-list__item-link" href="#" aria-label="Twitter">
+                           <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                 d="M19.7025 4.11415C19.0067 4.42248 18.2592 4.63082 17.4733 4.72498C18.2842 4.23981 18.8908 3.4762 19.18 2.57665C18.4182 3.02914 17.5844 3.34765 16.715 3.51832C16.1303 2.89404 15.3559 2.48025 14.5119 2.34121C13.668 2.20217 12.8017 2.34564 12.0477 2.74936C11.2936 3.15308 10.694 3.79445 10.3418 4.5739C9.9896 5.35335 9.9046 6.22727 10.1 7.05998C8.55639 6.98248 7.04635 6.58127 5.66784 5.8824C4.28934 5.18353 3.07319 4.20262 2.09832 3.00332C1.76499 3.57832 1.57332 4.24498 1.57332 4.95498C1.57295 5.59415 1.73035 6.22352 2.03155 6.78726C2.33276 7.351 2.76846 7.83168 3.29999 8.18665C2.68355 8.16703 2.08072 8.00047 1.54166 7.70082V7.75082C1.54159 8.64727 1.85168 9.51613 2.41931 10.21C2.98693 10.9038 3.77713 11.3799 4.65582 11.5575C4.08398 11.7122 3.48444 11.735 2.90249 11.6241C3.1504 12.3955 3.63332 13.07 4.28363 13.5533C4.93394 14.0365 5.71909 14.3043 6.52916 14.3191C5.15402 15.3987 3.45573 15.9842 1.70749 15.9816C1.39781 15.9817 1.08839 15.9636 0.780823 15.9275C2.55539 17.0685 4.62111 17.674 6.73082 17.6716C13.8725 17.6716 17.7767 11.7566 17.7767 6.62665C17.7767 6.45998 17.7725 6.29165 17.765 6.12498C18.5244 5.57579 19.1799 4.89573 19.7008 4.11665L19.7025 4.11415V4.11415Z" />
+                           </svg>
+                        </a>
+                     </li>
+                     <li class="socials-list__item">
+                        <a class="socials-list__item socials-list__item-link" href="#" aria-label="Medium">
+                           <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                 d="M3.64335 6.05325C3.65356 5.95181 3.63989 5.84938 3.60342 5.75416C3.56696 5.65895 3.50872 5.57359 3.43335 5.50492L1.87669 3.61575V3.33325H6.70835L10.4434 11.5874L13.7267 3.33325H18.3334V3.61575L17.0025 4.89992C16.9461 4.94346 16.9026 5.0015 16.8766 5.06784C16.8507 5.13418 16.8432 5.20633 16.855 5.27659V14.7216C16.8432 14.7918 16.8507 14.864 16.8766 14.9303C16.9026 14.9967 16.9461 15.0547 17.0025 15.0983L18.3025 16.3833V16.6666H11.7659V16.3841L13.1125 15.0674C13.245 14.9341 13.245 14.8949 13.245 14.6916V7.05659L9.50169 16.6349H8.99669L4.63835 7.05659V13.4766C4.60252 13.7458 4.69169 14.0183 4.88002 14.2133L6.63085 16.3533V16.6349H1.66669V16.3533L3.41669 14.2133C3.50928 14.1166 3.578 13.9997 3.61736 13.8718C3.65671 13.7439 3.66562 13.6085 3.64335 13.4766V6.05325Z" />
+                           </svg>
+                        </a>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </footer>
+   <script src="js/app.js"></script>
+</body>
+</html>
