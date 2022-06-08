@@ -9,36 +9,41 @@
    <link rel="stylesheet" href="css/reset.css">
    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap"
       rel="stylesheet">
+   <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
    <title>ТЕХПРОМСЕРТ</title>
 </head>
 
 <body>
    <!-- header -->
-   <header class="header section-header">
+   <header class="header section-header" id="header">
       <div class="container">
          <div class="section-header__inner">
 
             <img class="logo" src="img/logo.svg" alt="logo">
 
-            <nav class="menu">
+            <button class="burger" id="burger" type="button">
+               <span class="burger__line"></span>
+            </button>
+
+            <nav class="menu" id="header-menu">
                <ul class="menu__list">
                   <li class="menu__list-item">
-                     <a class="menu-link menu-link--active" href="#">О компании</a>
+                     <a class="menu-link menu-link--active" href="#about" data-goto="#about">О компании</a>
                   </li>
                   <li class="menu__list-item">
-                     <a class="menu-link" href="#">Преимущества</a>
+                     <a class="menu-link" href="#features" data-goto="#features">Преимущества</a>
                   </li>
                   <li class="menu__list-item">
-                     <a class="menu-link" href="#">Наши услуги</a>
+                     <a class="menu-link" href="#services" data-goto="#services">Наши услуги</a>
                   </li>
                   <li class="menu__list-item">
-                     <a class="menu-link" href="#">Отзывы</a>
+                     <a class="menu-link" href="#testimonials" data-goto="#testimonials">Отзывы</a>
                   </li>
                   <li class="menu__list-item">
-                     <a class="menu-link" href="#">FAQ</a>
+                     <a class="menu-link" href="#faq" data-goto="#faq">FAQ</a>
                   </li>
                   <li class="menu__list-item">
-                     <a class="menu-link" href="#">Контакты</a>
+                     <a class="menu-link" href="#contacts" data-goto="#contacts">Контакты</a>
                   </li>
                </ul>
             </nav>
@@ -53,10 +58,32 @@
             <div class="section-intro__inner">
                <h1 class="title">Быстрая сертификация вашей продукции по низким ценам!</h1>
                <h2 class="subtitle">Поможем с оформлением разрешительных документов под ключ</h2>
-               <button class="btn btn--red" href="#">Бесплатная консультация</button>
+               <button class="btn btn--red open-popup" href="#">Бесплатная консультация</button>
             </div>
          </div>
       </section> <!-- / intro  -->
+
+      <!-- Pop-up -->
+      <div class="popup__bg">
+         <form class="popup">
+            <svg class="close-popup" width="50" height="50" viewBox="0 0 50 50" fill="none"
+               xmlns="http://www.w3.org/2000/svg">
+               <path
+                  d="M37.3195 10.4773L25.0008 22.796L12.682 10.4773C12.3857 10.2062 11.9963 10.0598 11.5947 10.0687C11.1932 10.0776 10.8106 10.2411 10.5266 10.525C10.2427 10.809 10.0792 11.1916 10.0703 11.5931C10.0614 11.9947 10.2078 12.3841 10.4789 12.6804L22.7914 24.9992L10.4758 37.3148C10.3253 37.4582 10.205 37.6302 10.122 37.8207C10.039 38.0113 9.99488 38.2165 9.99231 38.4243C9.98973 38.6322 10.0287 38.8384 10.107 39.0309C10.1853 39.2235 10.3013 39.3984 10.4481 39.5455C10.595 39.6926 10.7698 39.8088 10.9622 39.8874C11.1546 39.9659 11.3608 40.0052 11.5687 40.0029C11.7765 40.0006 11.9818 39.9568 12.1724 39.8741C12.3631 39.7913 12.5353 39.6713 12.6789 39.521L25.0008 27.2054L37.3195 39.5242C37.6158 39.7953 38.0053 39.9417 38.4068 39.9328C38.8083 39.9239 39.1909 39.7604 39.4749 39.4764C39.7589 39.1924 39.9223 38.8098 39.9312 38.4083C39.9401 38.0068 39.7938 37.6173 39.5226 37.321L27.2039 25.0023L39.5226 12.6804C39.6731 12.537 39.7934 12.365 39.8764 12.1745C39.9594 11.9839 40.0035 11.7787 40.0061 11.5709C40.0087 11.363 39.9697 11.1568 39.8914 10.9643C39.8131 10.7717 39.6971 10.5968 39.5503 10.4497C39.4034 10.3026 39.2286 10.1864 39.0362 10.1078C38.8438 10.0293 38.6376 9.99 38.4297 9.99228C38.2219 9.99456 38.0166 10.0384 37.826 10.1211C37.6353 10.2039 37.4631 10.3239 37.3195 10.4742V10.4773Z"/>
+            </svg>
+            <!-- <img src="img/popup/ep_close.svg" class="close-popup"> -->
+            <label class="popup__group">
+               <input class="popup__input req" id="name" type="text" placeholder="Ваше имя*" name="name"
+                  data-validate-field="name">
+            </label>
+            <label class="popup__group">
+               <input class="popup__input req" id="phone" type="tel" placeholder="Номер телефона*" name="tel"
+                  data-validate-field="tel">
+            </label>
+            <button class="popup__btn" type="submit">Перезвоните мне</button>
+         </form>
+      </div>
+      <!-- Pop-up -->
 
       <!-- offer -->
       <section class="offer section-offer">
@@ -65,7 +92,7 @@
 
                <h3 class="title base-title">Рассчитать стоимость сертификата</h3>
                <p class="offer__subtitle">Отвечаем в течение 15 минут в рабочее время</p>
-               <form class="form">
+               <form class="form" id="form1" novalidate method="POST" action="#" enctype="multipart/form-data">
                   <h4 class="form__title">Информация о продукции</h4>
 
                   <div class="form__row">
@@ -91,27 +118,29 @@
                   <div class="form__row">
                      <div class="form__group">
                         <label class="form__label" for="name">Ваше имя*</label>
-                        <input class="form__input" id="name" type="text" placeholder="Ваше имя" name="name">
+                        <input class="form__input req" id="name" type="text" placeholder="Ваше имя*" name="name" data-validate-field="name">
                      </div>
 
                      <div class="form__group">
                         <label class="form__label" for="phone"> Номер телефона*</label>
-                        <input class="form__input" id="phone" type="tel" placeholder="Номер телефона" name="tel">
+                        <input class="form__input req" id="phone" type="tel" placeholder="Номер телефона*" name="tel" data-validate-field="tel">
                      </div>
 
                      <div class="form__group">
                         <label class="form__label" for="mail">Email*</label>
-                        <input class="form__input" id="mail" type="email" placeholder="Email" name="email">
+                        <input class="form__input req email" id="email" type="email" placeholder="Email*" name="email"
+                           data-validate-field="email">
                      </div>
                   </div>
 
                   <div class="form__row">
                      <div class="form__group group__btn">
                         <button class="btn btn--red">Отправить</button>
-                        <label class="form__label checkbox__label" for="agreement"><span>Я даю свое согласие на
+                        <input checked class="checkbox__input req" id="politic" type="checkbox" name="politic"
+                           data-validate-field="checkbox">
+                        <label class="form__label checkbox__label" for="politic"><span>Я даю свое согласие на
                               <a class="checkbox__label-politic" href="#">обработку персональных
                                  данных</a></span></label>
-                        <input checked class="checkbox__input req" id="agreement" type="checkbox" name="agreement">
                      </div>
                   </div>
             </div>
@@ -121,11 +150,11 @@
       </section> <!-- / offer -->
 
       <!-- about -->
-      <section class="about section-about">
+      <section class="about section-about" id="about">
          <div class="container">
             <h3 class="title base-title">О компании</h3>
             <div class="section-about__inner">
-               <img class="image" src="img/about/about.jpg" alt="О компании">
+               <img class="image" src="img/about/about (1).webp" alt="О компании">
                <div class="content">
                   <p class="text">Мы являемся крупным многопрофильным центром по оформлению разрешительной
                      документации, объединяющим как органы по сертификации, так и несколько испытательных лабораторий
@@ -163,7 +192,7 @@
       </section> <!-- /.numbers -->
 
       <!-- features -->
-      <section class="features section-features">
+      <section class="features section-features" id="features">
          <div class="container">
             <h3 class="title base-title">Наши преимущества</h3>
             <div class="section-features__inner">
@@ -188,53 +217,53 @@
       </section> <!-- / features -->
 
       <!-- services -->
-      <section class="services section-services">
+      <section class="services section-services" id="services">
          <h3 class="title base-title">Наши услуги</h3>
          <div class="section-services__inner">
-            <div class="section-services__item">
-               <img class="img" src="img/services/Documents.jpeg" alt="">
+            <div class="services__item">
+               <img class="img" src="img/services/Paket-dokumentov.webp" alt="">
                <div class="content">
                   <h4 class="title">Сертификаты и декларации соответствия ТР ТС</h4>
                </div>
             </div>
-            <div class="section-services__item">
-               <img class="img" src="img/services/Documents.jpeg" alt="">
+            <div class="services__item">
+               <img class="img" src="img/services/documents.webp" alt="">
                <div class="content">
-                  <h4 class="title">Сертификаты и декларации соответствия ТР ТС</h4>
+                  <h4 class="title">Сертификат ИСО</h4>
                </div>
             </div>
-            <div class="section-services__item">
-               <img class="img" src="img/services/Documents.jpeg" alt="">
+            <div class="services__item">
+               <img class="img" src="img/services/services.webp" alt="">
                <div class="content">
-                  <h4 class="title">Сертификаты и декларации соответствия ТР ТС</h4>
+                  <h4 class="title">Государственная регистрация продукции</h4>
                </div>
             </div>
-            <div class="section-services__item">
-               <img class="img" src="img/services/Documents.jpeg" alt="">
+            <div class="services__item">
+               <img class="img" src="img/services/dokumenty.webp" alt="">
                <div class="content">
-                  <h4 class="title">Сертификаты и декларации соответствия ТР ТС</h4>
+                  <h4 class="title">Отказное письмо</h4>
                </div>
             </div>
-            <div class="section-services__item">
-               <img class="img" src="img/services/Documents.jpeg" alt="">
+            <div class="services__item">
+               <img class="img" src="img/services/sertificat.webp" alt="">
                <div class="content">
-                  <h4 class="title">Сертификаты и декларации соответствия ТР ТС</h4>
+                  <h4 class="title">Добровольный сертификат</h4>
                </div>
             </div>
-            <div class="section-services__item">
-               <img class="img" src="img/services/Documents.jpeg" alt="">
+            <div class="services__item">
+               <img class="img" src="img/services/services3.webp" alt="">
                <div class="content">
-                  <h4 class="title">Сертификаты и декларации соответствия ТР ТС</h4>
+                  <h4 class="title">Технические условия на продукцию</h4>
                </div>
             </div>
-            <div class="section-services__item">
-               <img class="img" src="img/services/Documents.jpeg" alt="">
+            <div class="services__item">
+               <img class="img" src="img/services/services2.webp" alt="">
                <div class="content">
-                  <h4 class="title">Сертификаты и декларации соответствия ТР ТС</h4>
+                  <h4 class="title">Пожарный сертификат</h4>
                </div>
             </div>
-            <div class="section-services__item">
-               <img class="img" src="img/services/Documents.jpeg" alt="">
+            <div class="services__item">
+               <img class="img" src="img/services/services4.webp" alt="">
                <div class="content">
                   <h4 class="title">Сертификаты и декларации соответствия ТР ТС</h4>
                </div>
@@ -243,14 +272,15 @@
       </section> <!-- / services -->
 
       <!-- testimonials -->
-      <section class="testimonials section-testimonials">
+      <section class="testimonials section-testimonials hide" id="testimonials">
          <div class="container">
             <div class="section-testimonials__inner">
                <h3 class="title base-title">Отзывы</h3>
 
-               <div class="section-testimonials__cart">
-                  <ul class="section-testimonials__slider">
-                     <li class="slider-item">
+               <div class="section-testimonials__cart swiper">
+                  <ul class="section-testimonials__slider swiper-wrapper">
+
+                     <li class="slider-item swiper-slide">
                         <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing
                            elit.
                            Temporibus, voluptatibus tempora autem ea sit soluta dicta provident quasi, aut ullam et
@@ -258,21 +288,39 @@
                         <p class="name">Имя Фамилия</p>
                         <p class="post">Должность</p>
                         <div class="photo">
-                           <img src="/img/testimonials/foto1.jpg" alt="">
+                           <img src="/img/testimonials/foto1.webp" alt="">
                         </div>
                      </li>
+
+                     <li class="slider-item swiper-slide">
+                        <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing
+                           elit.
+                           Temporibus, voluptatibus tempora autem ea sit soluta dicta provident quasi, aut ullam et
+                           velit perspiciatis.</p>
+                        <p class="name">Имя Фамилия</p>
+                        <p class="post">Должность</p>
+                        <div class="photo">
+                           <img src="/img/testimonials/foto1.webp" alt="">
+                        </div>
+                     </li>
+
+                     <li class="slider-item swiper-slide">
+                        <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing
+                           elit.
+                           Temporibus, voluptatibus tempora autem ea sit soluta dicta provident quasi, aut ullam et
+                           velit perspiciatis.</p>
+                        <p class="name">Имя Фамилия</p>
+                        <p class="post">Должность</p>
+                        <div class="photo">
+                           <img src="/img/testimonials/foto1.webp" alt="">
+                        </div>
+                     </li>
+
                   </ul>
 
-                  <ul class="dots">
-                     <li class="dots__item"></li>
-                     <li class="dots__item"></li>
-                     <li class="dots__item dots__item--active"></li>
-                     <li class="dots__item"></li>
-                     <li class="dots__item"></li>
-                     <li class="dots__item"></li>
-                     <li class="dots__item"></li>
-                     <li class="dots__item"></li>
-                  </ul>
+                  <button class="swiper-button-prev"></button>
+                  <button class="swiper-button-next"></button>
+
                </div>
 
             </div>
@@ -286,12 +334,15 @@
                <h2 class="title">Получить консультацию специалиста</h2>
                <p class="subtitle">Ответим на все ваши вопросы и подберем оптимальное решение</p>
 
-               <form class="form consultation__form" id="'form" action="">
+               <form class="form consultation__form" id="form2" method="POST" action="#" enctype="multipart/form-data">
 
-                  <input class="form__input" type="text" placeholder="Ваше имя" name="name">
+                  <label class="consultation__form__label">
+                     <input class="form__input req" id="name" type="text" placeholder="Ваше имя*" name="name" data-validate-field="name">
+                  </label>
 
-                     <input class="form__input" type="tel" placeholder="Номер телефона" name="tel">
-
+                  <label class="consultation__form__label">
+                     <input class="form__input req" id="phone" type="tel" placeholder="Номер телефона*" name="tel" data-validate-field="tel">
+                  </label>
                      <button class="btn btn--red">Отправить</button>
 
                </form>
@@ -300,13 +351,13 @@
       </section> <!-- / consultation  -->
 
       <!-- faq -->
-      <section class="faq section-faq">
+      <section class="faq section-faq" id="faq">
          <div class="container">
             <div class="section-faq__inner">
                <h3 class="title base-title">Ответы на вопросы</h3>
 
                <ul class="faq-accordion">
-                  <li class="faq-accordion__item faq-accordion__item--active">
+                  <li class="faq-accordion__item">
                      <div class="faq-accordion__item-trigger">
                         <div class="faq-accordion__item-trigger-icon">
                            <svg width="20" height="14" viewBox="0 0 20 14" fill="none"
@@ -386,7 +437,7 @@
       </section><!-- / faq -->
 
       <!-- contacts -->
-      <section class="contacts section-contacts">
+      <section class="contacts section-contacts" id="contacts">
          <div class="container">
             <h3 class="title base-title">Как нас найти</h3>
             <div class="section-contacts__inner">
@@ -416,7 +467,7 @@
          <div class="container">
             <div class="section-questions__inner">
                <h4 class="title">Остались вопросы?</h4>
-               <a class="questions__link" href="#">Задайте их специалисту</a>
+               <a class="questions__link open-popup" href="#">Задайте их специалисту</a>
             </div>
          </div>
       </section> <!-- /.questions -->
@@ -431,22 +482,22 @@
             <nav class="menu">
                <ul class="menu__list">
                   <li class="menu__list-item">
-                     <a class="menu-link menu-link--active" href="#">О компании</a>
+                     <a class="menu-link menu-link--active" href="#about">О компании</a>
                   </li>
                   <li class="menu__list-item">
-                     <a class="menu-link" href="#">Преимущества</a>
+                     <a class="menu-link" href="#features">Преимущества</a>
                   </li>
                   <li class="menu__list-item">
-                     <a class="menu-link" href="#">Наши услуги</a>
+                     <a class="menu-link" href="#services">Наши услуги</a>
                   </li>
                   <li class="menu__list-item">
-                     <a class="menu-link" href="#">Отзывы</a>
+                     <a class="menu-link" href="#testimonials">Отзывы</a>
                   </li>
                   <li class="menu__list-item">
-                     <a class="menu-link" href="#">FAQ</a>
+                     <a class="menu-link" href="#faq">FAQ</a>
                   </li>
                   <li class="menu__list-item">
-                     <a class="menu-link" href="#">Контакты</a>
+                     <a class="menu-link" href="#contacts">Контакты</a>
                   </li>
                </ul>
             </nav>
@@ -496,6 +547,11 @@
          </div>
       </div>
    </footer>
+   
+
+   <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+   <script src="js/inputmask.min.js"></script>
+   <script src="js/just-validate.min.js"></script>
    <script src="js/app.js"></script>
 </body>
 
