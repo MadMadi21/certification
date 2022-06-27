@@ -241,6 +241,7 @@ document.addEventListener('DOMContentLoaded', function () {
       }
    })
 
+
 });
 
 // Карта яндекс
@@ -252,50 +253,5 @@ document.addEventListener('DOMContentLoaded', function () {
       });
    }
 
-////////////////////////////////////////////////////
-   // const form = document.getElementById('form');
-   // const formReq = document.querySelectorAll('.req');
-   // const inputEmail = document.getElementById('email');
-   // const inputPhone = document.getElementById('phone');
-   // const inputCheckbox = document.getElementById('politic');
-
-   // function validateEmail(email) {
-   //    return /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(input.value);
-   // }
-   
-   // form.onsubmit = function () {
-   //    let emailVal = inputEmail.value;
-   //    let phoneVal = inputPhone.value;
-   //    let emptyInputs = Array.from(formReq).filter(input => input.value === '');
 
 
-   //    formReq.forEach(function(input) {
-   //       if(input.value === '') {
-   //          input.classList.add('error');
-   //       } else {
-   //          input.classList.remove('error');
-   //       }
-   //    });
-
-   //    if(emptyInputs.length !== 0) {
-   //       console.log('error');
-   //       return false;
-   //    }
-
-   //    if(!validateEmail(emailVal)) {
-   //       console.log('error email');
-   //       inputEmail.classList.add('error');
-   //       return false;
-   //    } else {
-   //       inputEmail.classList.remove('error');
-   //    }
-
-   //    if(!inputCheckbox.checked) {
-   //       console.log('error checkbox');
-   //       inputCheckbox.classList.add('error');
-   //       return false;
-   //    } else {
-   //       inputCheckbox.classList.remove('error');
-   //    }
-   // }
- 
