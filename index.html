@@ -47,7 +47,7 @@
                   </li>
                </ul>
             </nav>
-
+         </div>
       </div>
    </header> <!-- / header -->
 
@@ -58,7 +58,7 @@
             <div class="section-intro__inner">
                <h1 class="title">Быстрая сертификация вашей продукции по низким ценам!</h1>
                <h2 class="subtitle">Поможем с оформлением разрешительных документов под ключ</h2>
-               <button class="btn btn--red open-popup" href="#">Бесплатная консультация</button>
+               <button class="btn btn--red open-popup">Бесплатная консультация</button>
             </div>
          </div>
       </section> <!-- / intro  -->
@@ -73,11 +73,11 @@
             </svg>
             <!-- <img src="img/popup/ep_close.svg" class="close-popup"> -->
             <label class="popup__group">
-               <input class="popup__input req" id="name" type="text" placeholder="Ваше имя*" name="name"
+               <input class="popup__input req" id="popupName" type="text" placeholder="Ваше имя*" name="name"
                   data-validate-field="name">
             </label>
             <label class="popup__group">
-               <input class="popup__input req" id="phone" type="tel" placeholder="Номер телефона*" name="tel"
+               <input class="popup__input req" id="popupPhone" type="tel" placeholder="Номер телефона*" name="tel"
                   data-validate-field="tel">
             </label>
             <button class="popup__btn" type="submit">Перезвоните мне</button>
@@ -95,57 +95,56 @@
                <form class="form" id="form1" novalidate method="POST" action="#" enctype="multipart/form-data">
                   <h4 class="form__title">Информация о продукции</h4>
 
-                  <div class="form__row">
+                     <div class="form__row">
 
-                     <div class="form__group">
-                        <label class="form__label" for="documentName">Наименование документа</label>
-                        <input class="form__input" id="documentName" type="text" name="document_name">
+                        <div class="form__group">
+                           <label class="form__label" for="documentName">Наименование документа</label>
+                           <input class="form__input" id="documentName" type="text" name="document_name">
+                        </div>
+
+                        <div class="form__group">
+                           <label class="form__label" for="productName">Наименование продукции</label>
+                           <input class="form__input" id="productName" type="text" name="product_name">
+                        </div>
+
+                        <div class="form__group">
+                           <label class="form__label" for="country">Страна происхождения</label>
+                           <input class="form__input" id="country" type="text" name="country">
+                        </div>
                      </div>
 
-                     <div class="form__group">
-                        <label class="form__label" for="productName">Наименование продукции</label>
-                        <input class="form__input" id="productName" type="text" name="product_name">
+                     <h4 class="form__title">Контактная информация</h4>
+
+                     <div class="form__row">
+                        <div class="form__group">
+                           <label class="form__label" for="name">Ваше имя*</label>
+                           <input class="form__input req" id="name" type="text" placeholder="Ваше имя*" name="name" data-validate-field="name">
+                        </div>
+
+                        <div class="form__group">
+                           <label class="form__label" for="phone"> Номер телефона*</label>
+                           <input class="form__input req" id="phone" type="tel" placeholder="Номер телефона*" name="tel" data-validate-field="tel">
+                        </div>
+
+                        <div class="form__group">
+                           <label class="form__label" for="email">Email*</label>
+                           <input class="form__input req email" id="email" type="email" placeholder="Email*" name="email"
+                              data-validate-field="email">
+                        </div>
                      </div>
 
-                     <div class="form__group">
-                        <label class="form__label" for="country">Страна происхождения</label>
-                        <input class="form__input" id="country" type="text" name="country">
+                     <div class="form__row">
+                        <div class="form__group group__btn">
+                           <button class="btn btn--red">Отправить</button>
+                           <input checked class="checkbox__input req" id="politic" type="checkbox" name="politic"
+                              data-validate-field="checkbox">
+                           <label class="form__label checkbox__label" for="politic"><span>Я даю свое согласие на
+                                 <a class="checkbox__label-politic" href="#">обработку персональных
+                                    данных</a></span></label>
+                        </div>
                      </div>
-                  </div>
-
-                  <h4 class="form__title">Контактная информация</h4>
-
-                  <div class="form__row">
-                     <div class="form__group">
-                        <label class="form__label" for="name">Ваше имя*</label>
-                        <input class="form__input req" id="name" type="text" placeholder="Ваше имя*" name="name" data-validate-field="name">
-                     </div>
-
-                     <div class="form__group">
-                        <label class="form__label" for="phone"> Номер телефона*</label>
-                        <input class="form__input req" id="phone" type="tel" placeholder="Номер телефона*" name="tel" data-validate-field="tel">
-                     </div>
-
-                     <div class="form__group">
-                        <label class="form__label" for="mail">Email*</label>
-                        <input class="form__input req email" id="email" type="email" placeholder="Email*" name="email"
-                           data-validate-field="email">
-                     </div>
-                  </div>
-
-                  <div class="form__row">
-                     <div class="form__group group__btn">
-                        <button class="btn btn--red">Отправить</button>
-                        <input checked class="checkbox__input req" id="politic" type="checkbox" name="politic"
-                           data-validate-field="checkbox">
-                        <label class="form__label checkbox__label" for="politic"><span>Я даю свое согласие на
-                              <a class="checkbox__label-politic" href="#">обработку персональных
-                                 данных</a></span></label>
-                     </div>
-                  </div>
+               </form>
             </div>
-            </form>
-         </div>
          </div>
       </section> <!-- / offer -->
 
@@ -154,7 +153,7 @@
          <div class="container">
             <h3 class="title base-title">О компании</h3>
             <div class="section-about__inner">
-               <img class="image" src="img/about/about (1).webp" alt="О компании">
+               <img class="image" src="img/about/about.webp" alt="О компании">
                <div class="content">
                   <p class="text">Мы являемся крупным многопрофильным центром по оформлению разрешительной
                      документации, объединяющим как органы по сертификации, так и несколько испытательных лабораторий
@@ -197,7 +196,7 @@
             <h3 class="title base-title">Наши преимущества</h3>
             <div class="section-features__inner">
                <div class="section-features__item">
-                  <img class="icon" src="img/features/law 1.svg" alt="">
+                  <img class="icon" src="img/features/law.svg" alt="">
                   <p class="text">Официальное оформление на всей территории РФ</p>
                </div>
                <div class="section-features__item">
@@ -227,43 +226,43 @@
                </div>
             </div>
             <div class="services__item">
-               <img class="img" src="img/services/documents.webp" alt="">
+               <img class="img" src="img/services/documents.webp" alt="Сертификат ИСО">
                <div class="content">
                   <h4 class="title">Сертификат ИСО</h4>
                </div>
             </div>
             <div class="services__item">
-               <img class="img" src="img/services/services.webp" alt="">
+               <img class="img" src="img/services/services.webp" alt="Государственная регистрация продукции">
                <div class="content">
                   <h4 class="title">Государственная регистрация продукции</h4>
                </div>
             </div>
             <div class="services__item">
-               <img class="img" src="img/services/dokumenty.webp" alt="">
+               <img class="img" src="img/services/dokumenty.webp" alt="Отказное письмо">
                <div class="content">
                   <h4 class="title">Отказное письмо</h4>
                </div>
             </div>
             <div class="services__item">
-               <img class="img" src="img/services/sertificat.webp" alt="">
+               <img class="img" src="img/services/sertificat.webp" alt="Добровольный сертификат">
                <div class="content">
                   <h4 class="title">Добровольный сертификат</h4>
                </div>
             </div>
             <div class="services__item">
-               <img class="img" src="img/services/services3.webp" alt="">
+               <img class="img" src="img/services/services3.webp" alt="Технические условия на продукцию">
                <div class="content">
                   <h4 class="title">Технические условия на продукцию</h4>
                </div>
             </div>
             <div class="services__item">
-               <img class="img" src="img/services/services2.webp" alt="">
+               <img class="img" src="img/services/services2.webp" alt="Пожарный сертификат">
                <div class="content">
                   <h4 class="title">Пожарный сертификат</h4>
                </div>
             </div>
             <div class="services__item">
-               <img class="img" src="img/services/services4.webp" alt="">
+               <img class="img" src="img/services/services4.webp" alt="Сертификаты и декларации соответствия ТР ТС">
                <div class="content">
                   <h4 class="title">Сертификаты и декларации соответствия ТР ТС</h4>
                </div>
@@ -336,12 +335,14 @@
 
                <form class="form consultation__form" id="form2" method="POST" action="#" enctype="multipart/form-data">
 
-                  <label class="consultation__form__label">
-                     <input class="form__input req" id="name" type="text" placeholder="Ваше имя*" name="name" data-validate-field="name">
+                  <label class="consultation__label">
+                     <input class="form__input req" id="consultationName" type="text" placeholder="Ваше имя*"
+                        name="name" data-validate-field="name">
                   </label>
 
-                  <label class="consultation__form__label">
-                     <input class="form__input req" id="phone" type="tel" placeholder="Номер телефона*" name="tel" data-validate-field="tel">
+                  <label class="consultation__label">
+                     <input class="form__input req" id="consultationPhone" type="tel" placeholder="Номер телефона*"
+                        name="tel" data-validate-field="tel">
                   </label>
                      <button class="btn btn--red">Отправить</button>
 
@@ -456,9 +457,8 @@
       </section> <!-- / contacts -->
 
       <!-- map -->
-      <div class="map section-contacts__map">
-         <script type="text/javascript" charset="utf-8" async
-            src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A661d3fd9d1db10dae22148fee52b826a11b6297b8ed3e5bb0238c40006c19251&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=false">
+      <div class="map section-contacts__map" id="yandexMap">
+         <script src="https://api-maps.yandex.ru/2.1/?apikey=0684f0b2-d290-46d8-8069-e1400536d00c&lang=ru_RU">
          </script>
       </div> <!-- / map -->
 
