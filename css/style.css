@@ -12,6 +12,18 @@ body {
   }
 }
 
+.page {
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
+}
+
 .container {
   max-width: 1220px;
   margin: auto;
@@ -25,13 +37,13 @@ body {
   font-size: 14px;
   font-weight: 500;
   border: none;
-  -webkit-transition: 0.2s;
-  -o-transition: 0.2s;
-  transition: 0.2s;
 }
 
 .btn--red {
   background-color: #EA002A;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 .btn--red:hover {
   background-color: #d10025;
@@ -49,6 +61,7 @@ body {
 }
 @media (max-width: 575px) {
   .base-title {
+    font-size: 24px;
     padding-bottom: 40px;
   }
 }
@@ -209,7 +222,7 @@ body {
 }
 
 .section-intro {
-  background: url("../img/intro/hero_bg_2.webp") no-repeat center;
+  background: url("../img/intro/hero_bg_2.webp") no-repeat fixed top center;
   background-size: cover;
 }
 .section-intro__inner {
@@ -238,7 +251,7 @@ body {
 }
 @media (max-width: 767px) {
   .section-intro__inner .title {
-    font-size: 38px;
+    font-size: 32px;
     padding-top: 40px;
     padding-bottom: 20px;
   }
@@ -297,8 +310,8 @@ body {
       -ms-transform: translate(-50%, -50%) scale(0);
           transform: translate(-50%, -50%) scale(0);
   background: #fafafa;
-  width: 400px;
-  padding: 40px;
+  width: 600px;
+  padding: 30px;
   -webkit-transition: 0.3s all;
   -o-transition: 0.3s all;
   transition: 0.3s all;
@@ -310,6 +323,10 @@ body {
   -webkit-transition: 0.3s all;
   -o-transition: 0.3s all;
   transition: 0.3s all;
+}
+.popup__title {
+  font-size: 18px;
+  color: #1A2A5C;
 }
 .popup__group {
   width: 100%;
@@ -377,13 +394,13 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   color: #fff;
-  font-size: 18px;
+  font-size: 16px;
   border: 1px solid #1A2A5C;
   background: #1A2A5C;
   -webkit-transition: 0.5s all;
   -o-transition: 0.5s all;
   transition: 0.5s all;
-  margin-top: 30px;
+  margin-top: 20px;
 }
 .popup__btn:hover {
   background: #fafafa;
@@ -395,31 +412,49 @@ body {
 
 .close-popup {
   position: absolute;
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
   top: 10px;
   right: 10px;
   cursor: pointer;
+  border: 1px solid #1A2A5C;
+  background-color: transparent;
+  border-radius: 50%;
+}
+.close-popup:hover {
+  background-color: #1A2A5C;
 }
 .close-popup path {
   fill: #C5CED6;
-}
-.close-popup path:hover {
-  fill: #1A2A5C;
   padding: 10px;
 }
+.close-popup path:hover {
+  fill: #fff;
+}
 
-@media (max-width: 575px) {
+@media (max-width: 620px) {
   .popup {
-    width: 300px;
+    width: 400px;
+  }
+  .popup__input {
+    height: 30px;
+    font-size: 14px;
+  }
+  .popup__btn {
+    font-size: 14px;
+  }
+}
+@media (max-width: 420px) {
+  .popup {
+    width: 260px;
     padding: 30px;
   }
   .popup__input {
     height: 30px;
-    font-size: 16px;
+    font-size: 14px;
   }
   .popup__btn {
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 .section-offer__inner {
@@ -429,6 +464,11 @@ body {
   padding: 50px;
   -webkit-box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
           box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+}
+@media (max-width: 575px) {
+  .section-offer__inner {
+    padding: 20px;
+  }
 }
 .section-offer__inner .base-title {
   padding-bottom: 20px;
@@ -776,6 +816,11 @@ body {
   padding: 20px;
   margin-bottom: 20px;
 }
+.section-features__item .icon:hover {
+  -webkit-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+          transform: scale(1.2);
+}
 .section-features__item .text {
   max-width: 200px;
   text-align: center;
@@ -895,7 +940,7 @@ body {
 }
 .section-testimonials__slider .slider-item {
   position: relative;
-  padding: 60px 80px;
+  padding: 40px 60px;
   border-radius: 8px;
   border: 1px solid #e5e9eb;
   background-color: #fff;
@@ -905,29 +950,11 @@ body {
   margin: 0 auto;
 }
 .section-testimonials__slider .text {
-  margin-bottom: 30px;
-}
-.section-testimonials__slider .name {
-  font-size: 16px;
-  font-weight: 600;
-  margin-bottom: -10px;
+  margin-bottom: 20px;
 }
 .section-testimonials__slider .post {
   font-size: 12px;
   font-weight: 700;
-}
-.section-testimonials__slider .photo {
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  width: 60px;
-  height: 60px;
-  border-radius: 100%;
-  overflow: hidden;
-  background-color: #fff;
-  -webkit-transform: translate(-50%, -30px);
-      -ms-transform: translate(-50%, -30px);
-          transform: translate(-50%, -30px);
 }
 
 .swiper-button-prev,
@@ -943,13 +970,13 @@ body {
 
 @media (max-width: 767px) {
   .section-testimonials__slider .slider-item {
-    padding: 30px 40px;
+    padding: 20px 30px;
   }
   .section-testimonials__slider .text {
     margin-bottom: 10px;
   }
   .section-testimonials__slider .post {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
 }
 @media (max-width: 575px) {
@@ -958,7 +985,10 @@ body {
   }
 }
 .section-consultation {
-  background-color: #1A2A5C;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(26, 42, 92, 0.7)), to(rgba(26, 42, 92, 0.8))), url("../img/intro/hero_bg_2.webp") no-repeat fixed top center;
+  background: -o-linear-gradient(rgba(26, 42, 92, 0.7), rgba(26, 42, 92, 0.8)), url("../img/intro/hero_bg_2.webp") no-repeat fixed top center;
+  background: linear-gradient(rgba(26, 42, 92, 0.7), rgba(26, 42, 92, 0.8)), url("../img/intro/hero_bg_2.webp") no-repeat fixed top center;
+  background-size: cover;
   padding: 50px 0 70px;
   margin: 50px 0 100px;
   color: #fff;
@@ -1064,6 +1094,8 @@ body {
     width: 100%;
   }
   .consultation__form .btn--red {
+    padding-left: 0;
+    padding-right: 0;
     width: 100%;
   }
 }
@@ -1221,9 +1253,10 @@ body {
   }
 }
 .section-footer {
+  margin-top: auto;
   background-color: #1A2A5C;
   color: #fff;
-  padding-bottom: 60px;
+  padding-bottom: 40px;
 }
 
 .logo-and-menu {
@@ -1233,7 +1266,7 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 40px 0 100px;
+  padding: 30px 0 60px;
 }
 .logo-and-menu .menu__list {
   display: -webkit-box;
@@ -1245,11 +1278,11 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  gap: 30px;
   font-size: 16px;
   font-weight: 500;
 }
 .logo-and-menu .menu__list a {
-  padding-left: 30px;
   -webkit-transition: 0.2s;
   -o-transition: 0.2s;
   transition: 0.2s;

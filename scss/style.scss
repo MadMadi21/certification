@@ -23,6 +23,16 @@ body {
   }
 }
 
+.page {
+  // убираем горизонтальный скролл
+  overflow: hidden;
+
+  // прижимаем футер
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 .container {
    max-width: 1220px;
    margin: auto;
@@ -36,11 +46,12 @@ body {
   font-size: 14px;
   font-weight: 500;
   border: none;
-  transition: .2s;
+
 }
 
 .btn--red {
   background-color: $color-secondary;
+  transition: all .2s ease-in-out;
 
   &:hover {
     background-color: darken($color-secondary, 5%);
@@ -58,6 +69,7 @@ body {
     text-align: center;
 
     @media (max-width: 575px) {
+      font-size: 24px;
       padding-bottom: $padding-vertical-sm;
     }
   }
@@ -222,7 +234,7 @@ body {
 
 // === intro ===
 .section-intro {
-  background: url("../img/intro/hero_bg_2.webp") no-repeat center;
+  background: url("../img/intro/hero_bg_2.webp") no-repeat fixed top center;
   background-size: cover;
 
   &__inner {
@@ -245,7 +257,7 @@ body {
       text-align: center;
 
       @media (max-width: 767px) {
-        font-size: 38px;
+        font-size: 32px;
         padding-top: $padding-vertical-sm;
         padding-bottom: $padding-vertical-xs;
         }
@@ -303,13 +315,18 @@ body {
     left: 50%;
     transform: translate(-50%, -50%) scale(0);
     background: #fafafa;
-    width: 400px;
-    padding: 40px;
+    width: 600px;
+    padding: 30px;
     transition: 0.3s all;
 
     &--active {
       transform: translate(-50%, -50%) scale(1);
       transition: 0.3s all;
+    }
+
+    &__title {
+      font-size: 18px;
+      color: $color-active;
     }
 
     &__group {
@@ -347,11 +364,11 @@ body {
       align-items: center;
       justify-content: center;
       color: #fff;
-      font-size: 18px;
+      font-size: 16px;
       border: 1px solid $color-active;
       background: $color-active;
       transition: 0.5s all;
-      margin-top: 30px;
+      margin-top: 20px;
    
       &:hover {
         background: #fafafa;;
@@ -363,35 +380,56 @@ body {
 
 .close-popup {
     position: absolute;
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
     top: 10px;
     right: 10px;
     cursor: pointer;
+    border: 1px solid $color-active;
+    background-color: transparent;
+    border-radius: 50%;
+
+    &:hover {
+      background-color: $color-active;
+    }
 
     path {
       fill: #C5CED6;
+      padding: 10px;
 
       &:hover {
-        fill: $color-active;
-        padding: 10px;
+        fill: #fff;
     }
   }
 }
 
-
-@media (max-width: 575px) {
+@media (max-width: 620px) {
   .popup {
-    width: 300px;
+    width: 400px;
+
+    &__input {
+      height: 30px;
+      font-size: 14px;
+    }
+
+    &__btn {
+      font-size: 14px;
+    }
+  }
+}
+
+@media (max-width: 420px) {
+  .popup {
+    width: 260px;
     padding: 30px;
 
     &__input {
       height: 30px;
-      font-size: 16px;
+      font-size: 14px;
     }
 
     &__btn {
-      font-size: 16px;
+      font-size: 14px;
     }
   }
 }
@@ -405,6 +443,10 @@ body {
     background-color: #fff;
     padding: 50px;
     box-shadow: 0 15px 25px rgba(0, 0, 0, .1);
+
+    @media (max-width: 575px) {
+      padding: 20px;    
+    }
 
     .base-title {
       padding-bottom: $padding-vertical-xs;
@@ -697,6 +739,10 @@ body {
       width: 100px;
       padding: 20px;
       margin-bottom: 20px;
+
+      &:hover {
+        transform: scale(1.2);
+      }
     }
 
     .text {
@@ -832,8 +878,7 @@ body {
     
     .slider-item {
       position: relative;
-      // max-width: 700px;
-      padding: 60px 80px;
+      padding: 40px 60px;
       border-radius: 8px;
       border: 1px solid #e5e9eb;
       background-color: #fff;
@@ -842,27 +887,11 @@ body {
       margin: 0 auto;
     }
     .text {
-      margin-bottom: 30px;
-    }
-    .name {
-      font-size: 16px;
-      font-weight: 600;
-      margin-bottom: -10px;
+      margin-bottom: 20px;
     }
     .post {
       font-size: 12px;
       font-weight: 700;
-    }
-    .photo {
-      position: absolute;
-      top: 100%;
-      left: 50%;
-      width: 60px;
-      height: 60px;
-      border-radius: 100%;
-      overflow: hidden;
-      background-color: #fff;
-      transform: translate(-50%, -30px);
     }
   }
 }
@@ -881,13 +910,13 @@ body {
   .section-testimonials {
     &__slider {
       .slider-item {
-        padding: 30px 40px;
+        padding: 20px 30px;
       }
       .text {
         margin-bottom: 10px;
       }
       .post {
-        margin-bottom: 20px;
+        margin-bottom: 10px;
       }
     }
   }
@@ -902,7 +931,8 @@ body {
 
 // === consultation ===
 .section-consultation {
-  background-color: $color-active;
+  background: linear-gradient(rgba(26, 42, 92, 0.7), rgba(26,42,92,.8)), url("../img/intro/hero_bg_2.webp") no-repeat fixed top center;
+  background-size: cover;
   padding: 50px 0 70px;
   margin: 50px 0 100px;
   color: #fff;
@@ -974,6 +1004,8 @@ body {
         width: 100%;
       }
       .btn--red {
+        padding-left: 0;
+        padding-right: 0;
         width: 100%;
       }
     }
@@ -1156,26 +1188,28 @@ body {
 
 // === footer ===
 .section-footer {
+  margin-top: auto;
+
   background-color: $color-active;
   color: #fff;
-  padding-bottom: $padding-vertical-lg;  
+  padding-bottom: $padding-vertical-sm;  
 }
 
 .logo-and-menu {
   display: flex;
   justify-content: space-between;
-  padding: 40px 0 100px;
+  padding: 30px 0 60px;
 
   .menu {
     &__list {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      gap: 30px;
       font-size: 16px;
       font-weight: 500;
 
       a {
-        padding-left: 30px;
         transition: .2s;
 
         &:hover {

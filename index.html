@@ -5,95 +5,108 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="css/style.css">
    <link rel="stylesheet" href="css/reset.css">
+   <link rel="apple-touch-icon" sizes="120x120" href="./img/favicons/apple-touch-icon.png">
+   <link rel="icon" type="image/png" sizes="32x32" href="./img/favicons/favicon-32x32.png">
+   <link rel="icon" type="image/png" sizes="16x16" href="./img/favicons/favicon-16x16.png">
+   <link rel="manifest" href="./img/favicons/site.webmanifest">
+   <link rel="mask-icon" href="./img/favicons/safari-pinned-tab.svg" color="#1a2a5c">
+   <meta name="msapplication-TileColor" content="#ff0000">
+   <meta name="theme-color" content="#1a2a5c">
+   
    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap"
       rel="stylesheet">
-   <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+   <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
+   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+   <link rel="stylesheet" href="css/style.css">
    <title>ТЕХПРОМСЕРТ</title>
 </head>
 
 <body>
-   <!-- header -->
-   <header class="header section-header" id="header">
-      <div class="container">
-         <div class="section-header__inner">
-
-            <img class="logo" src="img/logo.svg" alt="logo">
-
-            <button class="burger" id="burger" type="button">
-               <span class="burger__line"></span>
-            </button>
-
-            <nav class="menu" id="header-menu">
-               <ul class="menu__list">
-                  <li class="menu__list-item">
-                     <a class="menu-link menu-link--active" href="#about" data-goto="#about">О компании</a>
-                  </li>
-                  <li class="menu__list-item">
-                     <a class="menu-link" href="#features" data-goto="#features">Преимущества</a>
-                  </li>
-                  <li class="menu__list-item">
-                     <a class="menu-link" href="#services" data-goto="#services">Наши услуги</a>
-                  </li>
-                  <li class="menu__list-item">
-                     <a class="menu-link" href="#testimonials" data-goto="#testimonials">Отзывы</a>
-                  </li>
-                  <li class="menu__list-item">
-                     <a class="menu-link" href="#faq" data-goto="#faq">FAQ</a>
-                  </li>
-                  <li class="menu__list-item">
-                     <a class="menu-link" href="#contacts" data-goto="#contacts">Контакты</a>
-                  </li>
-               </ul>
-            </nav>
-         </div>
-      </div>
-   </header> <!-- / header -->
-
-   <main>
-      <!-- intro -->
-      <section class="intro section-intro">
+   <div class="page">
+      <header class="header section-header" id="header">
          <div class="container">
-            <div class="section-intro__inner">
-               <h1 class="title">Быстрая сертификация вашей продукции по низким ценам!</h1>
-               <h2 class="subtitle">Поможем с оформлением разрешительных документов под ключ</h2>
-               <button class="btn btn--red open-popup">Бесплатная консультация</button>
+            <div class="section-header__inner">
+
+               <a href="#">
+                  <img class="logo" src="img/logo.svg" alt="logo">
+               </a>
+
+               <button class="burger" id="burger" type="button">
+                  <span class="burger__line"></span>
+               </button>
+
+               <nav class="menu" id="header-menu">
+                  <ul class="menu__list">
+                     <li class="menu__list-item">
+                        <a class="menu-link menu-link--active" href="#about" data-goto="#about">О компании</a>
+                     </li>
+                     <li class="menu__list-item">
+                        <a class="menu-link" href="#features" data-goto="#features">Преимущества</a>
+                     </li>
+                     <li class="menu__list-item">
+                        <a class="menu-link" href="#services" data-goto="#services">Наши услуги</a>
+                     </li>
+                     <li class="menu__list-item">
+                        <a class="menu-link" href="#testimonials" data-goto="#testimonials">Отзывы</a>
+                     </li>
+                     <li class="menu__list-item">
+                        <a class="menu-link" href="#faq" data-goto="#faq">FAQ</a>
+                     </li>
+                     <li class="menu__list-item">
+                        <a class="menu-link" href="#contacts" data-goto="#contacts">Контакты</a>
+                     </li>
+                  </ul>
+               </nav>
             </div>
          </div>
-      </section> <!-- / intro  -->
+      </header> <!-- / header -->
 
-      <!-- Pop-up -->
-      <div class="popup__bg">
-         <form class="popup">
-            <svg class="close-popup" width="50" height="50" viewBox="0 0 50 50" fill="none"
-               xmlns="http://www.w3.org/2000/svg">
-               <path
-                  d="M37.3195 10.4773L25.0008 22.796L12.682 10.4773C12.3857 10.2062 11.9963 10.0598 11.5947 10.0687C11.1932 10.0776 10.8106 10.2411 10.5266 10.525C10.2427 10.809 10.0792 11.1916 10.0703 11.5931C10.0614 11.9947 10.2078 12.3841 10.4789 12.6804L22.7914 24.9992L10.4758 37.3148C10.3253 37.4582 10.205 37.6302 10.122 37.8207C10.039 38.0113 9.99488 38.2165 9.99231 38.4243C9.98973 38.6322 10.0287 38.8384 10.107 39.0309C10.1853 39.2235 10.3013 39.3984 10.4481 39.5455C10.595 39.6926 10.7698 39.8088 10.9622 39.8874C11.1546 39.9659 11.3608 40.0052 11.5687 40.0029C11.7765 40.0006 11.9818 39.9568 12.1724 39.8741C12.3631 39.7913 12.5353 39.6713 12.6789 39.521L25.0008 27.2054L37.3195 39.5242C37.6158 39.7953 38.0053 39.9417 38.4068 39.9328C38.8083 39.9239 39.1909 39.7604 39.4749 39.4764C39.7589 39.1924 39.9223 38.8098 39.9312 38.4083C39.9401 38.0068 39.7938 37.6173 39.5226 37.321L27.2039 25.0023L39.5226 12.6804C39.6731 12.537 39.7934 12.365 39.8764 12.1745C39.9594 11.9839 40.0035 11.7787 40.0061 11.5709C40.0087 11.363 39.9697 11.1568 39.8914 10.9643C39.8131 10.7717 39.6971 10.5968 39.5503 10.4497C39.4034 10.3026 39.2286 10.1864 39.0362 10.1078C38.8438 10.0293 38.6376 9.99 38.4297 9.99228C38.2219 9.99456 38.0166 10.0384 37.826 10.1211C37.6353 10.2039 37.4631 10.3239 37.3195 10.4742V10.4773Z"/>
-            </svg>
-            <!-- <img src="img/popup/ep_close.svg" class="close-popup"> -->
-            <label class="popup__group">
-               <input class="popup__input req" id="popupName" type="text" placeholder="Ваше имя*" name="name"
-                  data-validate-field="name">
-            </label>
-            <label class="popup__group">
-               <input class="popup__input req" id="popupPhone" type="tel" placeholder="Номер телефона*" name="tel"
-                  data-validate-field="tel">
-            </label>
-            <button class="popup__btn" type="submit">Перезвоните мне</button>
-         </form>
-      </div>
-      <!-- Pop-up -->
+      <main>
+         <!-- intro -->
+         <section class="intro section-intro">
+            <div class="container">
+               <div class="section-intro__inner">
+                  <h1 class="title" data-aos="zoom-in">Быстрая сертификация вашей продукции по низким ценам!</h1>
+                  <h2 class="subtitle" data-aos="zoom-in" data-aos-delay="400">Поможем с оформлением разрешительных
+                     документов под ключ</h2>
+                  <button class="btn btn--red open-popup" data-aos="zoom-in" data-aos-delay="800">Бесплатная
+                     консультация</button>
+               </div>
+            </div>
+         </section> <!-- / intro  -->
 
-      <!-- offer -->
-      <section class="offer section-offer">
-         <div class="container">
-            <div class="section-offer__inner">
+         <!-- Pop-up -->
+         <div class="popup__bg">
+            <form class="popup">
+               <svg class="close-popup" width="50" height="50" viewBox="0 0 50 50" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                     d="M37.3195 10.4773L25.0008 22.796L12.682 10.4773C12.3857 10.2062 11.9963 10.0598 11.5947 10.0687C11.1932 10.0776 10.8106 10.2411 10.5266 10.525C10.2427 10.809 10.0792 11.1916 10.0703 11.5931C10.0614 11.9947 10.2078 12.3841 10.4789 12.6804L22.7914 24.9992L10.4758 37.3148C10.3253 37.4582 10.205 37.6302 10.122 37.8207C10.039 38.0113 9.99488 38.2165 9.99231 38.4243C9.98973 38.6322 10.0287 38.8384 10.107 39.0309C10.1853 39.2235 10.3013 39.3984 10.4481 39.5455C10.595 39.6926 10.7698 39.8088 10.9622 39.8874C11.1546 39.9659 11.3608 40.0052 11.5687 40.0029C11.7765 40.0006 11.9818 39.9568 12.1724 39.8741C12.3631 39.7913 12.5353 39.6713 12.6789 39.521L25.0008 27.2054L37.3195 39.5242C37.6158 39.7953 38.0053 39.9417 38.4068 39.9328C38.8083 39.9239 39.1909 39.7604 39.4749 39.4764C39.7589 39.1924 39.9223 38.8098 39.9312 38.4083C39.9401 38.0068 39.7938 37.6173 39.5226 37.321L27.2039 25.0023L39.5226 12.6804C39.6731 12.537 39.7934 12.365 39.8764 12.1745C39.9594 11.9839 40.0035 11.7787 40.0061 11.5709C40.0087 11.363 39.9697 11.1568 39.8914 10.9643C39.8131 10.7717 39.6971 10.5968 39.5503 10.4497C39.4034 10.3026 39.2286 10.1864 39.0362 10.1078C38.8438 10.0293 38.6376 9.99 38.4297 9.99228C38.2219 9.99456 38.0166 10.0384 37.826 10.1211C37.6353 10.2039 37.4631 10.3239 37.3195 10.4742V10.4773Z" />
+               </svg>
+               <h4 class="popup__title">Заполните небольшую заявку и мы свяжемся с вами</h4>
+               <label class="popup__group">
+                  <input class="popup__input req" id="popupName" type="text" placeholder="Ваше имя*" name="name"
+                     data-validate-field="name">
+               </label>
+               <label class="popup__group">
+                  <input class="popup__input req" id="popupPhone" type="tel" placeholder="Номер телефона*" name="tel"
+                     data-validate-field="tel">
+               </label>
+               <button class="popup__btn" type="submit">Перезвоните мне</button>
+            </form>
+         </div>
+         <!-- Pop-up -->
 
-               <h3 class="title base-title">Рассчитать стоимость сертификата</h3>
-               <p class="offer__subtitle">Отвечаем в течение 15 минут в рабочее время</p>
-               <form class="form" id="form1" novalidate method="POST" action="#" enctype="multipart/form-data">
-                  <h4 class="form__title">Информация о продукции</h4>
+         <!-- offer -->
+         <section class="offer section-offer">
+            <div class="container">
+               <div class="section-offer__inner">
+
+                  <h3 class="title base-title" data-aos="zoom-in">Рассчитать стоимость сертификата</h3>
+                  <p class="offer__subtitle">Отвечаем в течение 15 минут в рабочее время</p>
+                  <form class="form" id="form1" novalidate method="POST" action="#" enctype="multipart/form-data">
+                     <h4 class="form__title">Информация о продукции</h4>
 
                      <div class="form__row">
 
@@ -118,18 +131,20 @@
                      <div class="form__row">
                         <div class="form__group">
                            <label class="form__label" for="name">Ваше имя*</label>
-                           <input class="form__input req" id="name" type="text" placeholder="Ваше имя*" name="name" data-validate-field="name">
+                           <input class="form__input req" id="name" type="text" placeholder="Ваше имя*" name="name"
+                              data-validate-field="name">
                         </div>
 
                         <div class="form__group">
                            <label class="form__label" for="phone"> Номер телефона*</label>
-                           <input class="form__input req" id="phone" type="tel" placeholder="Номер телефона*" name="tel" data-validate-field="tel">
+                           <input class="form__input req" id="phone" type="tel" placeholder="Номер телефона*" name="tel"
+                              data-validate-field="tel">
                         </div>
 
                         <div class="form__group">
                            <label class="form__label" for="email">Email*</label>
-                           <input class="form__input req email" id="email" type="email" placeholder="Email*" name="email"
-                              data-validate-field="email">
+                           <input class="form__input req email" id="email" type="email" placeholder="Email*"
+                              name="email" data-validate-field="email">
                         </div>
                      </div>
 
@@ -143,412 +158,424 @@
                                     данных</a></span></label>
                         </div>
                      </div>
-               </form>
-            </div>
-         </div>
-      </section> <!-- / offer -->
-
-      <!-- about -->
-      <section class="about section-about" id="about">
-         <div class="container">
-            <h3 class="title base-title">О компании</h3>
-            <div class="section-about__inner">
-               <img class="image" src="img/about/about.webp" alt="О компании">
-               <div class="content">
-                  <p class="text">Мы являемся крупным многопрофильным центром по оформлению разрешительной
-                     документации, объединяющим как органы по сертификации, так и несколько испытательных лабораторий
-                     имеющих аттестат Федеральной службы аккредитации.</p>
-                  <p class="text">Оказываем полный комплекс услуг по экспертизе, стандартизации и сертификации
-                     услуг, продукции и оборудования, пожарной сертификации и оформлению других видов разрешительной
-                     документации любой степени сложности во всех странах Таможенного Союза.</p>
+                  </form>
                </div>
             </div>
-         </div>
-      </section> <!-- / about -->
+         </section> <!-- / offer -->
 
-      <!-- / numbers -->
-      <div class="numbers section-numbers">
-         <div class="container">
-            <div class="section-numbers__inner">
-               <div class="section-numbers__item">
-                  <div data-digits-counter class="number">15</div>
-                  <p class="text">высококвалифицированных сотрудников</p>
-               </div>
-               <div class="section-numbers__item">
-                  <div data-digits-counter class="number">55%</div>
-                  <p class="text">клиентов пришли к нам по рекомендации</p>
-               </div>
-               <div class="section-numbers__item">
-                  <div data-digits-counter class="number">2890</div>
-                  <p class="text">выдано сертификатов</p>
-               </div>
-               <div class="section-numbers__item">
-                  <div data-digits-counter class="number">1450</div>
-                  <p class="text">довольных клиентов</p>
+         <!-- about -->
+         <section class="about section-about" id="about">
+            <div class="container">
+               <h3 class="title base-title" data-aos="zoom-in">О компании</h3>
+               <div class="section-about__inner">
+                  <img class="image" src="img/about/about.webp" alt="О компании" data-aos="flip-left"
+                     data-aos-delay="300">
+                  <div class="content">
+                     <p class="text">Мы являемся крупным многопрофильным центром по оформлению разрешительной
+                        документации, объединяющим как органы по сертификации, так и несколько испытательных лабораторий
+                        имеющих аттестат Федеральной службы аккредитации.</p>
+                     <p class="text">Оказываем полный комплекс услуг по экспертизе, стандартизации и сертификации
+                        услуг, продукции и оборудования, пожарной сертификации и оформлению других видов разрешительной
+                        документации любой степени сложности во всех странах Таможенного Союза.</p>
+                  </div>
                </div>
             </div>
-         </div>
-      </div> <!-- /.numbers -->
+         </section> <!-- / about -->
 
-      <!-- features -->
-      <section class="features section-features" id="features">
-         <div class="container">
-            <h3 class="title base-title">Наши преимущества</h3>
-            <div class="section-features__inner">
-               <div class="section-features__item">
-                  <img class="icon" src="img/features/law.svg" alt="">
-                  <p class="text">Официальное оформление на всей территории РФ</p>
-               </div>
-               <div class="section-features__item">
-                  <img class="icon" src="img/features/stopwatch.svg" alt="">
-                  <p class="text">10 лет на рынке сертификации</p>
-               </div>
-               <div class="section-features__item">
-                  <img class="icon" src="img/features/stamp.svg" alt="">
-                  <p class="text">Оформление документов от одного рабочего дня</p>
-               </div>
-               <div class="section-features__item">
-                  <img class="icon" src="img/features/help-20-regular.svg" alt="">
-                  <p class="text">Бесплатная помощь эксперта</p>
-               </div>
-            </div>
-         </div>
-      </section> <!-- / features -->
-
-      <!-- services -->
-      <section class="services section-services" id="services">
-         <h3 class="title base-title">Наши услуги</h3>
-         <div class="section-services__inner">
-            <div class="services__item">
-               <img class="img" src="img/services/Paket-dokumentov.webp" alt="">
-               <div class="content">
-                  <h4 class="title">Сертификаты и декларации соответствия ТР ТС</h4>
+         <!-- / numbers -->
+         <div class="numbers section-numbers">
+            <div class="container">
+               <div class="section-numbers__inner">
+                  <div class="section-numbers__item">
+                     <div data-digits-counter class="number" data-aos="zoom-in" data-aos-delay="100">15</div>
+                     <p class="text">высококвалифицированных сотрудников</p>
+                  </div>
+                  <div class="section-numbers__item">
+                     <div data-digits-counter class="number" data-aos="zoom-in" data-aos-delay="100">55%</div>
+                     <p class="text">клиентов пришли к нам по рекомендации</p>
+                  </div>
+                  <div class="section-numbers__item">
+                     <div data-digits-counter class="number" data-aos="zoom-in" data-aos-delay="100">2890</div>
+                     <p class="text">выдано сертификатов</p>
+                  </div>
+                  <div class="section-numbers__item">
+                     <div data-digits-counter class="number" data-aos="zoom-in" data-aos-delay="100">1450</div>
+                     <p class="text">довольных клиентов</p>
+                  </div>
                </div>
             </div>
-            <div class="services__item">
-               <img class="img" src="img/services/documents.webp" alt="Сертификат ИСО">
-               <div class="content">
-                  <h4 class="title">Сертификат ИСО</h4>
+         </div> <!-- /.numbers -->
+
+         <!-- features -->
+         <section class="features section-features" id="features">
+            <div class="container">
+               <h3 class="title base-title" data-aos="zoom-in">Наши преимущества</h3>
+               <div class="section-features__inner">
+                  <div class="section-features__item">
+                     <img class="icon" src="img/features/law.svg" alt="Официальное оформление" data-aos="zoom-in"
+                        data-aos-delay="300">
+                     <p class="text">Официальное оформление на всей территории РФ</p>
+                  </div>
+                  <div class="section-features__item">
+                     <img class="icon" src="img/features/stopwatch.svg" alt="10 лет на рынке" data-aos="zoom-in"
+                        data-aos-delay="300">
+                     <p class="text">10 лет на рынке сертификации</p>
+                  </div>
+                  <div class="section-features__item">
+                     <img class="icon" src="img/features/stamp.svg" alt=" От одного рабочего дня" data-aos="zoom-in"
+                        data-aos-delay="300">
+                     <p class="text">Оформление документов от одного рабочего дня</p>
+                  </div>
+                  <div class="section-features__item">
+                     <img class="icon" src="img/features/help-20-regular.svg" alt="Бесплатная помощь" data-aos="zoom-in"
+                        data-aos-delay="300">
+                     <p class="text">Бесплатная помощь эксперта</p>
+                  </div>
                </div>
             </div>
-            <div class="services__item">
-               <img class="img" src="img/services/services.webp" alt="Государственная регистрация продукции">
-               <div class="content">
-                  <h4 class="title">Государственная регистрация продукции</h4>
+         </section> <!-- / features -->
+
+         <!-- services -->
+         <section class="services section-services" id="services">
+            <h3 class="title base-title" data-aos="zoom-in">Наши услуги</h3>
+            <div class="section-services__inner">
+               <div class="services__item">
+                  <img class="img" src="img/services/Paket-dokumentov.webp" alt="">
+                  <div class="content">
+                     <h4 class="title">Сертификаты и декларации соответствия ТР ТС</h4>
+                  </div>
+               </div>
+               <div class="services__item">
+                  <img class="img" src="img/services/documents.webp" alt="Сертификат ИСО">
+                  <div class="content">
+                     <h4 class="title">Сертификат ИСО</h4>
+                  </div>
+               </div>
+               <div class="services__item">
+                  <img class="img" src="img/services/services.webp" alt="Государственная регистрация продукции">
+                  <div class="content">
+                     <h4 class="title">Государственная регистрация продукции</h4>
+                  </div>
+               </div>
+               <div class="services__item">
+                  <img class="img" src="img/services/dokumenty.webp" alt="Отказное письмо">
+                  <div class="content">
+                     <h4 class="title">Отказное письмо</h4>
+                  </div>
+               </div>
+               <div class="services__item">
+                  <img class="img" src="img/services/sertificat.webp" alt="Добровольный сертификат">
+                  <div class="content">
+                     <h4 class="title">Добровольный сертификат</h4>
+                  </div>
+               </div>
+               <div class="services__item">
+                  <img class="img" src="img/services/services3.webp" alt="Технические условия на продукцию">
+                  <div class="content">
+                     <h4 class="title">Технические условия на продукцию</h4>
+                  </div>
+               </div>
+               <div class="services__item">
+                  <img class="img" src="img/services/services2.webp" alt="Пожарный сертификат">
+                  <div class="content">
+                     <h4 class="title">Пожарный сертификат</h4>
+                  </div>
+               </div>
+               <div class="services__item">
+                  <img class="img" src="img/services/services4.webp" alt="Сертификаты и декларации соответствия ТР ТС">
+                  <div class="content">
+                     <h4 class="title">Сертификаты и декларации соответствия ТР ТС</h4>
+                  </div>
                </div>
             </div>
-            <div class="services__item">
-               <img class="img" src="img/services/dokumenty.webp" alt="Отказное письмо">
-               <div class="content">
-                  <h4 class="title">Отказное письмо</h4>
-               </div>
-            </div>
-            <div class="services__item">
-               <img class="img" src="img/services/sertificat.webp" alt="Добровольный сертификат">
-               <div class="content">
-                  <h4 class="title">Добровольный сертификат</h4>
-               </div>
-            </div>
-            <div class="services__item">
-               <img class="img" src="img/services/services3.webp" alt="Технические условия на продукцию">
-               <div class="content">
-                  <h4 class="title">Технические условия на продукцию</h4>
-               </div>
-            </div>
-            <div class="services__item">
-               <img class="img" src="img/services/services2.webp" alt="Пожарный сертификат">
-               <div class="content">
-                  <h4 class="title">Пожарный сертификат</h4>
-               </div>
-            </div>
-            <div class="services__item">
-               <img class="img" src="img/services/services4.webp" alt="Сертификаты и декларации соответствия ТР ТС">
-               <div class="content">
-                  <h4 class="title">Сертификаты и декларации соответствия ТР ТС</h4>
-               </div>
-            </div>
-         </div>
-      </section> <!-- / services -->
+         </section> <!-- / services -->
 
-      <!-- testimonials -->
-      <section class="testimonials section-testimonials hide" id="testimonials">
-         <div class="container">
-            <div class="section-testimonials__inner">
-               <h3 class="title base-title">Отзывы</h3>
+         <!-- testimonials -->
+         <section class="testimonials section-testimonials hide" id="testimonials">
+            <div class="container">
+               <div class="section-testimonials__inner">
+                  <h3 class="title base-title" data-aos="zoom-in">Отзывы</h3>
 
-               <div class="section-testimonials__cart swiper">
-                  <ul class="section-testimonials__slider swiper-wrapper">
+                  <div class="section-testimonials__cart swiper">
+                     <ul class="section-testimonials__slider swiper-wrapper">
 
-                     <li class="slider-item swiper-slide">
-                        <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing
-                           elit.
-                           Temporibus, voluptatibus tempora autem ea sit soluta dicta provident quasi, aut ullam et
-                           velit perspiciatis.</p>
-                        <p class="name">Имя Фамилия</p>
-                        <p class="post">Должность</p>
-                        <div class="photo">
-                           <img src="/img/testimonials/foto1.webp" alt="">
-                        </div>
-                     </li>
+                        <li class="slider-item swiper-slide">
+                           <p class="text">Выражаем брагодарность компании ТЕХПРОМСЕРТ за профессионально проделанную работу и индивидуальный подход. Надеемся на дальнейшее взаимовыгодное сотрудничество! </p>
+                           <p class="post">Компания СтоЛэнд</p>
+                        </li>
 
-                     <li class="slider-item swiper-slide">
-                        <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing
-                           elit.
-                           Temporibus, voluptatibus tempora autem ea sit soluta dicta provident quasi, aut ullam et
-                           velit perspiciatis.</p>
-                        <p class="name">Имя Фамилия</p>
-                        <p class="post">Должность</p>
-                        <div class="photo">
-                           <img src="/img/testimonials/foto1.webp" alt="">
-                        </div>
-                     </li>
+                        <li class="slider-item swiper-slide">
+                           <p class="text">Благодарим за заинтересованность в предоставлении наиболее оптимальных
+                              вариантов сертификации нашего оборудования! особая благодарность специалисту Ксении. Было
+                              приятно с вами сотрудничать!</p>
+                           <p class="post">ООО "НОВА"</p>
+                        </li>
 
-                     <li class="slider-item swiper-slide">
-                        <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing
-                           elit.
-                           Temporibus, voluptatibus tempora autem ea sit soluta dicta provident quasi, aut ullam et
-                           velit perspiciatis.</p>
-                        <p class="name">Имя Фамилия</p>
-                        <p class="post">Должность</p>
-                        <div class="photo">
-                           <img src="/img/testimonials/foto1.webp" alt="">
-                        </div>
-                     </li>
+                        <li class="slider-item swiper-slide">
+                           <p class="text">Выражаем брагодарность компании ТЕХПРОМСЕРТ за оперативное выполнение срочной задачи. Отличная работа! Очень доброжелательные специалисты, работают настоящие профессионалы!</p>
+                           <p class="post">ООО "Лидер-М"</p>
+                        </li>
 
-                  </ul>
+                     </ul>
 
-                  <button class="swiper-button-prev"></button>
-                  <button class="swiper-button-next"></button>
+                     <button class="swiper-button-prev"></button>
+                     <button class="swiper-button-next"></button>
+
+                  </div>
 
                </div>
-
             </div>
-         </div>
-      </section> <!-- / testimonials -->
+         </section> <!-- / testimonials -->
 
-      <!-- consultation -->
-      <section class="consultation section-consultation">
-         <div class="container">
-            <div class="section-consultation__inner">
-               <h2 class="title">Получить консультацию специалиста</h2>
-               <p class="subtitle">Ответим на все ваши вопросы и подберем оптимальное решение</p>
+         <!-- consultation -->
+         <section class="consultation section-consultation">
+            <div class="container">
+               <div class="section-consultation__inner">
+                  <h2 class="title" data-aos="zoom-in">Получить консультацию специалиста</h2>
+                  <p class="subtitle">Ответим на все ваши вопросы и подберем оптимальное решение</p>
 
-               <form class="form consultation__form" id="form2" method="POST" action="#" enctype="multipart/form-data">
+                  <form class="form consultation__form" id="form2" method="POST" action="#"
+                     enctype="multipart/form-data">
 
-                  <label class="consultation__label">
-                     <input class="form__input req" id="consultationName" type="text" placeholder="Ваше имя*"
-                        name="name" data-validate-field="name">
-                  </label>
+                     <label class="consultation__label">
+                        <input class="form__input req" id="consultationName" type="text" placeholder="Ваше имя*"
+                           name="name" data-validate-field="name">
+                     </label>
 
-                  <label class="consultation__label">
-                     <input class="form__input req" id="consultationPhone" type="tel" placeholder="Номер телефона*"
-                        name="tel" data-validate-field="tel">
-                  </label>
+                     <label class="consultation__label">
+                        <input class="form__input req" id="consultationPhone" type="tel" placeholder="Номер телефона*"
+                           name="tel" data-validate-field="tel">
+                     </label>
                      <button class="btn btn--red">Отправить</button>
 
-               </form>
-            </div>
-         </div>
-      </section> <!-- / consultation  -->
-
-      <!-- faq -->
-      <section class="faq section-faq" id="faq">
-         <div class="container">
-            <div class="section-faq__inner">
-               <h3 class="title base-title">Ответы на вопросы</h3>
-
-               <ul class="faq-accordion">
-                  <li class="faq-accordion__item">
-                     <div class="faq-accordion__item-trigger">
-                        <div class="faq-accordion__item-trigger-icon">
-                           <svg width="20" height="14" viewBox="0 0 20 14" fill="none"
-                              xmlns="http://www.w3.org/2000/svg">
-                              <path class="faq-arrow"
-                                 d="M3.15233 1.43973C2.62199 0.803311 1.67614 0.717325 1.03972 1.24767C0.403309 1.77802 0.317323 2.72386 0.847669 3.36028L3.15233 1.43973ZM10 12L8.84767 12.9603C9.13266 13.3023 9.55483 13.5 10 13.5C10.4452 13.5 10.8673 13.3023 11.1523 12.9603L10 12ZM19.1523 3.36028C19.6827 2.72386 19.5967 1.77802 18.9603 1.24767C18.3239 0.717324 17.378 0.80331 16.8477 1.43973L19.1523 3.36028ZM0.847669 3.36028L8.84767 12.9603L11.1523 11.0397L3.15233 1.43973L0.847669 3.36028ZM11.1523 12.9603L19.1523 3.36028L16.8477 1.43973L8.84767 11.0397L11.1523 12.9603Z" />
-                           </svg>
-                        </div>
-                        <p class="faq-accordion__item-trigger-text">Как происходит процесс сотрудничества?</p>
-                     </div>
-                     <div class="faq-accordion__item-content">
-                        <p class="faq-accordion__item-content-text">Lorem ipsum dolor sit amet, consectetur
-                           adipisicing elit. Ratione dolorum beatae quas asperiores eveniet atque officiis velit omnis
-                           minima
-                           sunt.
-                        </p>
-                     </div>
-                  </li>
-
-                  <li class="faq-accordion__item">
-                     <div class="faq-accordion__item-trigger">
-                        <div class="faq-accordion__item-trigger-icon">
-                           <svg width="20" height="14" viewBox="0 0 20 14" fill="none"
-                              xmlns="http://www.w3.org/2000/svg">
-                              <path class="faq-arrow"
-                                 d="M3.15233 1.43973C2.62199 0.803311 1.67614 0.717325 1.03972 1.24767C0.403309 1.77802 0.317323 2.72386 0.847669 3.36028L3.15233 1.43973ZM10 12L8.84767 12.9603C9.13266 13.3023 9.55483 13.5 10 13.5C10.4452 13.5 10.8673 13.3023 11.1523 12.9603L10 12ZM19.1523 3.36028C19.6827 2.72386 19.5967 1.77802 18.9603 1.24767C18.3239 0.717324 17.378 0.80331 16.8477 1.43973L19.1523 3.36028ZM0.847669 3.36028L8.84767 12.9603L11.1523 11.0397L3.15233 1.43973L0.847669 3.36028ZM11.1523 12.9603L19.1523 3.36028L16.8477 1.43973L8.84767 11.0397L11.1523 12.9603Z" />
-                           </svg>
-                        </div>
-                        <p class="faq-accordion__item-trigger-text">Какие закрывающие документы вы предоставляете?</p>
-                     </div>
-                     <div class="faq-accordion__item-content">
-                        <p class="faq-accordion__item-content-text">Lorem ipsum dolor sit amet, consectetur
-                           adipisicing elit. Ratione dolorum beatae quas asperiores eveniet atque officiis velit omnis
-                           minima sunt.</p>
-                     </div>
-                  </li>
-
-                  <li class="faq-accordion__item">
-                     <div class="faq-accordion__item-trigger">
-                        <div class="faq-accordion__item-trigger-icon">
-                           <svg width="20" height="14" viewBox="0 0 20 14" fill="none"
-                              xmlns="http://www.w3.org/2000/svg">
-                              <path class="faq-arrow"
-                                 d="M3.15233 1.43973C2.62199 0.803311 1.67614 0.717325 1.03972 1.24767C0.403309 1.77802 0.317323 2.72386 0.847669 3.36028L3.15233 1.43973ZM10 12L8.84767 12.9603C9.13266 13.3023 9.55483 13.5 10 13.5C10.4452 13.5 10.8673 13.3023 11.1523 12.9603L10 12ZM19.1523 3.36028C19.6827 2.72386 19.5967 1.77802 18.9603 1.24767C18.3239 0.717324 17.378 0.80331 16.8477 1.43973L19.1523 3.36028ZM0.847669 3.36028L8.84767 12.9603L11.1523 11.0397L3.15233 1.43973L0.847669 3.36028ZM11.1523 12.9603L19.1523 3.36028L16.8477 1.43973L8.84767 11.0397L11.1523 12.9603Z" />
-                           </svg>
-                        </div>
-                        <p class="faq-accordion__item-trigger-text">Какой срок действия у сертификатов и деклараций?</p>
-                     </div>
-                     <div class="faq-accordion__item-content">
-                        <p class="faq-accordion__item-content-text">Lorem ipsum dolor sit amet, consectetur
-                           adipisicing elit. Ratione dolorum beatae quas asperiores eveniet atque officiis velit omnis
-                           minima sunt.</p>
-                     </div>
-                  </li>
-
-                  <li class="faq-accordion__item">
-                     <div class="faq-accordion__item-trigger">
-                        <div class="faq-accordion__item-trigger-icon">
-                           <svg width="20" height="14" viewBox="0 0 20 14" fill="none"
-                              xmlns="http://www.w3.org/2000/svg">
-                              <path class="faq-arrow"
-                                 d="M3.15233 1.43973C2.62199 0.803311 1.67614 0.717325 1.03972 1.24767C0.403309 1.77802 0.317323 2.72386 0.847669 3.36028L3.15233 1.43973ZM10 12L8.84767 12.9603C9.13266 13.3023 9.55483 13.5 10 13.5C10.4452 13.5 10.8673 13.3023 11.1523 12.9603L10 12ZM19.1523 3.36028C19.6827 2.72386 19.5967 1.77802 18.9603 1.24767C18.3239 0.717324 17.378 0.80331 16.8477 1.43973L19.1523 3.36028ZM0.847669 3.36028L8.84767 12.9603L11.1523 11.0397L3.15233 1.43973L0.847669 3.36028ZM11.1523 12.9603L19.1523 3.36028L16.8477 1.43973L8.84767 11.0397L11.1523 12.9603Z" />
-                           </svg>
-                        </div>
-                        <p class="faq-accordion__item-trigger-text">Срок изготовления сертификатов и деклараций?</p>
-                     </div>
-                     <div class="faq-accordion__item-content">
-                        <p class="faq-accordion__item-content-text">Lorem ipsum dolor sit amet, consectetur
-                           adipisicing elit. Ratione dolorum beatae quas asperiores eveniet atque officiis velit omnis
-                           minima sunt.</p>
-                     </div>
-                  </li>
-               </ul>
-
-            </div>
-         </div>
-      </section><!-- / faq -->
-
-      <!-- contacts -->
-      <section class="contacts section-contacts" id="contacts">
-         <div class="container">
-            <h3 class="title base-title">Как нас найти</h3>
-            <div class="section-contacts__inner">
-               <div class="section-contacts__content">
-                  <h4 class="title">Адрес офиса:</h4>
-                  <p class="text">г. Москва, Сормовский проезд, д. 11с1</p>
-
-               </div>
-               <div class="section-contacts__content">
-                  <h4 class="title">График работы:</h4>
-                  <p class="text">Пн-Пт 09.00 - 18.00</p>
-                  <p class="text">Сб-Вс Выходные</p>
+                  </form>
                </div>
             </div>
-         </div>
-      </section> <!-- / contacts -->
+         </section> <!-- / consultation  -->
 
-      <!-- map -->
-      <div class="map section-contacts__map" id="yandexMap">
-         <script src="https://api-maps.yandex.ru/2.1/?apikey=0684f0b2-d290-46d8-8069-e1400536d00c&lang=ru_RU">
-         </script>
-      </div> <!-- / map -->
+         <!-- faq -->
+         <section class="faq section-faq" id="faq">
+            <div class="container">
+               <div class="section-faq__inner">
+                  <h3 class="title base-title" data-aos="zoom-in">Ответы на вопросы</h3>
 
-      <!-- questions -->
-      <section class="questions section-questions">
-         <div class="container">
-            <div class="section-questions__inner">
-               <h4 class="title">Остались вопросы?</h4>
-               <a class="questions__link open-popup" href="#">Задайте их специалисту</a>
+                  <ul class="faq-accordion">
+                     <li class="faq-accordion__item">
+                        <div class="faq-accordion__item-trigger">
+                           <div class="faq-accordion__item-trigger-icon">
+                              <svg width="20" height="14" viewBox="0 0 20 14" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                 <path class="faq-arrow"
+                                    d="M3.15233 1.43973C2.62199 0.803311 1.67614 0.717325 1.03972 1.24767C0.403309 1.77802 0.317323 2.72386 0.847669 3.36028L3.15233 1.43973ZM10 12L8.84767 12.9603C9.13266 13.3023 9.55483 13.5 10 13.5C10.4452 13.5 10.8673 13.3023 11.1523 12.9603L10 12ZM19.1523 3.36028C19.6827 2.72386 19.5967 1.77802 18.9603 1.24767C18.3239 0.717324 17.378 0.80331 16.8477 1.43973L19.1523 3.36028ZM0.847669 3.36028L8.84767 12.9603L11.1523 11.0397L3.15233 1.43973L0.847669 3.36028ZM11.1523 12.9603L19.1523 3.36028L16.8477 1.43973L8.84767 11.0397L11.1523 12.9603Z" />
+                              </svg>
+                           </div>
+                           <p class="faq-accordion__item-trigger-text">Как быстро вы сможете оформить сертификат/декларацию?</p>
+                        </div>
+                        <div class="faq-accordion__item-content">
+                           <p class="faq-accordion__item-content-text">Стандартная процедура это 3 дня. Мы постараемся
+                              сделать быстрее насколько это возможно. Если же со стороны заказчика нет задержек в подаче
+                              заявки и оплате и ему надо срочно - мы можем оформить документацию в течение 2 часов!
+                           </p>
+                        </div>
+                     </li>
+
+                     <li class="faq-accordion__item">
+                        <div class="faq-accordion__item-trigger">
+                           <div class="faq-accordion__item-trigger-icon">
+                              <svg width="20" height="14" viewBox="0 0 20 14" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                 <path class="faq-arrow"
+                                    d="M3.15233 1.43973C2.62199 0.803311 1.67614 0.717325 1.03972 1.24767C0.403309 1.77802 0.317323 2.72386 0.847669 3.36028L3.15233 1.43973ZM10 12L8.84767 12.9603C9.13266 13.3023 9.55483 13.5 10 13.5C10.4452 13.5 10.8673 13.3023 11.1523 12.9603L10 12ZM19.1523 3.36028C19.6827 2.72386 19.5967 1.77802 18.9603 1.24767C18.3239 0.717324 17.378 0.80331 16.8477 1.43973L19.1523 3.36028ZM0.847669 3.36028L8.84767 12.9603L11.1523 11.0397L3.15233 1.43973L0.847669 3.36028ZM11.1523 12.9603L19.1523 3.36028L16.8477 1.43973L8.84767 11.0397L11.1523 12.9603Z" />
+                              </svg>
+                           </div>
+                           <p class="faq-accordion__item-trigger-text">Можно ли оформить сертификат/декларация дистанционно?
+                           </p>
+                        </div>
+                        <div class="faq-accordion__item-content">
+                           <p class="faq-accordion__item-content-text">Конечно, все согласования и отправка документов
+                              происходит в режиме онлайн через электронную почту, мессенджеры, по телефону - через
+                              удобный для вас канал. Отправка готовой документации - курьером на ваш адрес. </p>
+                        </div>
+                     </li>
+
+                     <li class="faq-accordion__item">
+                        <div class="faq-accordion__item-trigger">
+                           <div class="faq-accordion__item-trigger-icon">
+                              <svg width="20" height="14" viewBox="0 0 20 14" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                 <path class="faq-arrow"
+                                    d="M3.15233 1.43973C2.62199 0.803311 1.67614 0.717325 1.03972 1.24767C0.403309 1.77802 0.317323 2.72386 0.847669 3.36028L3.15233 1.43973ZM10 12L8.84767 12.9603C9.13266 13.3023 9.55483 13.5 10 13.5C10.4452 13.5 10.8673 13.3023 11.1523 12.9603L10 12ZM19.1523 3.36028C19.6827 2.72386 19.5967 1.77802 18.9603 1.24767C18.3239 0.717324 17.378 0.80331 16.8477 1.43973L19.1523 3.36028ZM0.847669 3.36028L8.84767 12.9603L11.1523 11.0397L3.15233 1.43973L0.847669 3.36028ZM11.1523 12.9603L19.1523 3.36028L16.8477 1.43973L8.84767 11.0397L11.1523 12.9603Z" />
+                              </svg>
+                           </div>
+                           <p class="faq-accordion__item-trigger-text">Как проверить подлинность сертификата?
+                           </p>
+                        </div>
+                        <div class="faq-accordion__item-content">
+                           <p class="faq-accordion__item-content-text">Существуют реестры, где регистрируются номера
+                              оформленных документов. Вы самостоятельно можете проверить наличие сертификата в данном
+                              реестре. При необходимости ссылки на сайты реестров будут предоставлены нашими
+                              менеджерами. </p>
+                        </div>
+                     </li>
+
+                     <li class="faq-accordion__item">
+                        <div class="faq-accordion__item-trigger">
+                           <div class="faq-accordion__item-trigger-icon">
+                              <svg width="20" height="14" viewBox="0 0 20 14" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                 <path class="faq-arrow"
+                                    d="M3.15233 1.43973C2.62199 0.803311 1.67614 0.717325 1.03972 1.24767C0.403309 1.77802 0.317323 2.72386 0.847669 3.36028L3.15233 1.43973ZM10 12L8.84767 12.9603C9.13266 13.3023 9.55483 13.5 10 13.5C10.4452 13.5 10.8673 13.3023 11.1523 12.9603L10 12ZM19.1523 3.36028C19.6827 2.72386 19.5967 1.77802 18.9603 1.24767C18.3239 0.717324 17.378 0.80331 16.8477 1.43973L19.1523 3.36028ZM0.847669 3.36028L8.84767 12.9603L11.1523 11.0397L3.15233 1.43973L0.847669 3.36028ZM11.1523 12.9603L19.1523 3.36028L16.8477 1.43973L8.84767 11.0397L11.1523 12.9603Z" />
+                              </svg>
+                           </div>
+                           <p class="faq-accordion__item-trigger-text">Когда к вам можно обратиться?</p>
+                        </div>
+                        <div class="faq-accordion__item-content">
+                           <p class="faq-accordion__item-content-text">Вы можете оставить заявку на нашем сайте в любое
+                              время суток, а затем специалист по сертификации свяжется с вами в рабочее время (пн-пт с
+                              9:00 до 18:00).</p>
+                        </div>
+                     </li>
+
+                     <li class="faq-accordion__item">
+                        <div class="faq-accordion__item-trigger">
+                           <div class="faq-accordion__item-trigger-icon">
+                              <svg width="20" height="14" viewBox="0 0 20 14" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                 <path class="faq-arrow"
+                                    d="M3.15233 1.43973C2.62199 0.803311 1.67614 0.717325 1.03972 1.24767C0.403309 1.77802 0.317323 2.72386 0.847669 3.36028L3.15233 1.43973ZM10 12L8.84767 12.9603C9.13266 13.3023 9.55483 13.5 10 13.5C10.4452 13.5 10.8673 13.3023 11.1523 12.9603L10 12ZM19.1523 3.36028C19.6827 2.72386 19.5967 1.77802 18.9603 1.24767C18.3239 0.717324 17.378 0.80331 16.8477 1.43973L19.1523 3.36028ZM0.847669 3.36028L8.84767 12.9603L11.1523 11.0397L3.15233 1.43973L0.847669 3.36028ZM11.1523 12.9603L19.1523 3.36028L16.8477 1.43973L8.84767 11.0397L11.1523 12.9603Z" />
+                              </svg>
+                           </div>
+                           <p class="faq-accordion__item-trigger-text">Нужны ли образцы для оформления документа?</p>
+                        </div>
+                        <div class="faq-accordion__item-content">
+                           <p class="faq-accordion__item-content-text">Для разработки нормативно-технической
+                              документации образцы не нужны. Для остальной документации на продукцию собственного
+                              производства образцы будут необходимы.</p>
+                        </div>
+                     </li>
+                  </ul>
+
+               </div>
             </div>
-         </div>
-      </section> <!-- /.questions -->
-   </main>
+         </section><!-- / faq -->
 
-   <footer class="footer section-footer">
-      <div class="container">
-         <div class="logo-and-menu">
+         <!-- contacts -->
+         <section class="contacts section-contacts" id="contacts">
+            <div class="container">
+               <h3 class="title base-title" data-aos="zoom-in">Как нас найти</h3>
+               <div class="section-contacts__inner">
+                  <div class="section-contacts__content">
+                     <h4 class="title">Адрес офиса:</h4>
+                     <p class="text">г. Москва, Сормовский проезд, д. 11с1</p>
 
-            <img class="logo" src="img/logo_white.svg" alt="logo">
+                  </div>
+                  <div class="section-contacts__content">
+                     <h4 class="title">График работы:</h4>
+                     <p class="text">Пн-Пт 09.00 - 18.00</p>
+                     <p class="text">Сб-Вс Выходные</p>
+                  </div>
+               </div>
+            </div>
+         </section> <!-- / contacts -->
 
-            <nav class="menu">
-               <ul class="menu__list">
-                  <li class="menu__list-item">
-                     <a class="menu-link menu-link--active" href="#about">О компании</a>
+         <!-- map -->
+         <div class="map section-contacts__map" id="yandexMap">
+            <script type="text/javascript" charset="utf-8" async
+               src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ad28f88a67493f47c958a81a995bcbeff23e5a997f4f54ca2605b99eab1c2d3cc&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true">
+            </script>
+         </div> <!-- / map -->
+
+         <!-- questions -->
+         <section class="questions section-questions">
+            <div class="container">
+               <div class="section-questions__inner">
+                  <h4 class="title">Остались вопросы?</h4>
+                  <a class="questions__link open-popup" href="#">Задайте их специалисту</a>
+               </div>
+            </div>
+         </section> <!-- /.questions -->
+      </main>
+      <!-- main -->
+
+      <footer class="footer section-footer">
+         <div class="container">
+            <div class="logo-and-menu">
+
+               <img class="logo" src="img/logo_white.svg" alt="logo">
+
+               <nav class="menu">
+                  <ul class="menu__list">
+                     <li class="menu__list-item">
+                        <a class="menu-link menu-link--active" href="#about">О компании</a>
+                     </li>
+                     <li class="menu__list-item">
+                        <a class="menu-link" href="#features">Преимущества</a>
+                     </li>
+                     <li class="menu__list-item">
+                        <a class="menu-link" href="#services">Наши услуги</a>
+                     </li>
+                     <li class="menu__list-item">
+                        <a class="menu-link" href="#testimonials">Отзывы</a>
+                     </li>
+                     <li class="menu__list-item">
+                        <a class="menu-link" href="#faq">FAQ</a>
+                     </li>
+                     <li class="menu__list-item">
+                        <a class="menu-link" href="#contacts">Контакты</a>
+                     </li>
+                  </ul>
+               </nav>
+
+            </div>
+
+            <div class="copyright-and-socials">
+
+               <p class="text">
+                  Copyright © 2022
+               </p>
+
+               <ul class="socials-list">
+                  <li class="socials-list__item">
+                     <a href="#" aria-label="Facebook">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <path
+                              d="M9.55277 20V11.5539H7V8.51287H9.55277V5.91545C9.55277 3.87438 11.0607 2 14.5353 2C15.9421 2 16.9824 2.11799 16.9824 2.11799L16.9004 4.95778C16.9004 4.95778 15.8395 4.94874 14.6818 4.94874C13.4288 4.94874 13.228 5.45391 13.228 6.29237V8.51287H17L16.8359 11.5539H13.228V20H9.55277Z" />
+                        </svg>
+                     </a>
                   </li>
-                  <li class="menu__list-item">
-                     <a class="menu-link" href="#features">Преимущества</a>
+                  <li class="socials-list__item">
+                     <a href="#" aria-label="Telegram">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <path
+                              d="M17.2208 3.09759L2.44583 8.79509C1.4375 9.20009 1.44333 9.76259 2.26083 10.0134L6.05416 11.1968L14.8308 5.65926C15.2458 5.40676 15.625 5.54259 15.3133 5.81926L8.2025 12.2368H8.20083L8.2025 12.2376L7.94083 16.1476C8.32416 16.1476 8.49333 15.9718 8.70833 15.7643L10.5508 13.9726L14.3833 16.8034C15.09 17.1926 15.5975 16.9926 15.7733 16.1493L18.2892 4.29259C18.5467 3.26009 17.895 2.79259 17.2208 3.09759V3.09759Z" />
+                        </svg>
+                     </a>
                   </li>
-                  <li class="menu__list-item">
-                     <a class="menu-link" href="#services">Наши услуги</a>
+                  <li class="socials-list__item">
+                     <a href="#" aria-label="Twitter">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <path
+                              d="M19.7025 4.11415C19.0067 4.42248 18.2592 4.63082 17.4733 4.72498C18.2842 4.23981 18.8908 3.4762 19.18 2.57665C18.4182 3.02914 17.5844 3.34765 16.715 3.51832C16.1303 2.89404 15.3559 2.48025 14.5119 2.34121C13.668 2.20217 12.8017 2.34564 12.0477 2.74936C11.2936 3.15308 10.694 3.79445 10.3418 4.5739C9.9896 5.35335 9.9046 6.22727 10.1 7.05998C8.55639 6.98248 7.04635 6.58127 5.66784 5.8824C4.28934 5.18353 3.07319 4.20262 2.09832 3.00332C1.76499 3.57832 1.57332 4.24498 1.57332 4.95498C1.57295 5.59415 1.73035 6.22352 2.03155 6.78726C2.33276 7.351 2.76846 7.83168 3.29999 8.18665C2.68355 8.16703 2.08072 8.00047 1.54166 7.70082V7.75082C1.54159 8.64727 1.85168 9.51613 2.41931 10.21C2.98693 10.9038 3.77713 11.3799 4.65582 11.5575C4.08398 11.7122 3.48444 11.735 2.90249 11.6241C3.1504 12.3955 3.63332 13.07 4.28363 13.5533C4.93394 14.0365 5.71909 14.3043 6.52916 14.3191C5.15402 15.3987 3.45573 15.9842 1.70749 15.9816C1.39781 15.9817 1.08839 15.9636 0.780823 15.9275C2.55539 17.0685 4.62111 17.674 6.73082 17.6716C13.8725 17.6716 17.7767 11.7566 17.7767 6.62665C17.7767 6.45998 17.7725 6.29165 17.765 6.12498C18.5244 5.57579 19.1799 4.89573 19.7008 4.11665L19.7025 4.11415V4.11415Z" />
+                        </svg>
+                     </a>
                   </li>
-                  <li class="menu__list-item">
-                     <a class="menu-link" href="#testimonials">Отзывы</a>
-                  </li>
-                  <li class="menu__list-item">
-                     <a class="menu-link" href="#faq">FAQ</a>
-                  </li>
-                  <li class="menu__list-item">
-                     <a class="menu-link" href="#contacts">Контакты</a>
+                  <li class="socials-list__item">
+                     <a href="#" aria-label="Medium">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <path
+                              d="M3.64335 6.05325C3.65356 5.95181 3.63989 5.84938 3.60342 5.75416C3.56696 5.65895 3.50872 5.57359 3.43335 5.50492L1.87669 3.61575V3.33325H6.70835L10.4434 11.5874L13.7267 3.33325H18.3334V3.61575L17.0025 4.89992C16.9461 4.94346 16.9026 5.0015 16.8766 5.06784C16.8507 5.13418 16.8432 5.20633 16.855 5.27659V14.7216C16.8432 14.7918 16.8507 14.864 16.8766 14.9303C16.9026 14.9967 16.9461 15.0547 17.0025 15.0983L18.3025 16.3833V16.6666H11.7659V16.3841L13.1125 15.0674C13.245 14.9341 13.245 14.8949 13.245 14.6916V7.05659L9.50169 16.6349H8.99669L4.63835 7.05659V13.4766C4.60252 13.7458 4.69169 14.0183 4.88002 14.2133L6.63085 16.3533V16.6349H1.66669V16.3533L3.41669 14.2133C3.50928 14.1166 3.578 13.9997 3.61736 13.8718C3.65671 13.7439 3.66562 13.6085 3.64335 13.4766V6.05325Z" />
+                        </svg>
+                     </a>
                   </li>
                </ul>
-            </nav>
-
+            </div>
          </div>
-
-         <div class="copyright-and-socials">
-
-            <p class="text">
-               Copyright © 2022
-            </p>
-
-            <ul class="socials-list">
-               <li class="socials-list__item">
-                  <a href="#" aria-label="Facebook">
-                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                           d="M9.55277 20V11.5539H7V8.51287H9.55277V5.91545C9.55277 3.87438 11.0607 2 14.5353 2C15.9421 2 16.9824 2.11799 16.9824 2.11799L16.9004 4.95778C16.9004 4.95778 15.8395 4.94874 14.6818 4.94874C13.4288 4.94874 13.228 5.45391 13.228 6.29237V8.51287H17L16.8359 11.5539H13.228V20H9.55277Z" />
-                     </svg>
-                  </a>
-               </li>
-               <li class="socials-list__item">
-                  <a href="#" aria-label="Telegram">
-                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                           d="M17.2208 3.09759L2.44583 8.79509C1.4375 9.20009 1.44333 9.76259 2.26083 10.0134L6.05416 11.1968L14.8308 5.65926C15.2458 5.40676 15.625 5.54259 15.3133 5.81926L8.2025 12.2368H8.20083L8.2025 12.2376L7.94083 16.1476C8.32416 16.1476 8.49333 15.9718 8.70833 15.7643L10.5508 13.9726L14.3833 16.8034C15.09 17.1926 15.5975 16.9926 15.7733 16.1493L18.2892 4.29259C18.5467 3.26009 17.895 2.79259 17.2208 3.09759V3.09759Z" />
-                     </svg>
-                  </a>
-               </li>
-               <li class="socials-list__item">
-                  <a href="#" aria-label="Twitter">
-                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                           d="M19.7025 4.11415C19.0067 4.42248 18.2592 4.63082 17.4733 4.72498C18.2842 4.23981 18.8908 3.4762 19.18 2.57665C18.4182 3.02914 17.5844 3.34765 16.715 3.51832C16.1303 2.89404 15.3559 2.48025 14.5119 2.34121C13.668 2.20217 12.8017 2.34564 12.0477 2.74936C11.2936 3.15308 10.694 3.79445 10.3418 4.5739C9.9896 5.35335 9.9046 6.22727 10.1 7.05998C8.55639 6.98248 7.04635 6.58127 5.66784 5.8824C4.28934 5.18353 3.07319 4.20262 2.09832 3.00332C1.76499 3.57832 1.57332 4.24498 1.57332 4.95498C1.57295 5.59415 1.73035 6.22352 2.03155 6.78726C2.33276 7.351 2.76846 7.83168 3.29999 8.18665C2.68355 8.16703 2.08072 8.00047 1.54166 7.70082V7.75082C1.54159 8.64727 1.85168 9.51613 2.41931 10.21C2.98693 10.9038 3.77713 11.3799 4.65582 11.5575C4.08398 11.7122 3.48444 11.735 2.90249 11.6241C3.1504 12.3955 3.63332 13.07 4.28363 13.5533C4.93394 14.0365 5.71909 14.3043 6.52916 14.3191C5.15402 15.3987 3.45573 15.9842 1.70749 15.9816C1.39781 15.9817 1.08839 15.9636 0.780823 15.9275C2.55539 17.0685 4.62111 17.674 6.73082 17.6716C13.8725 17.6716 17.7767 11.7566 17.7767 6.62665C17.7767 6.45998 17.7725 6.29165 17.765 6.12498C18.5244 5.57579 19.1799 4.89573 19.7008 4.11665L19.7025 4.11415V4.11415Z" />
-                     </svg>
-                  </a>
-               </li>
-               <li class="socials-list__item">
-                  <a href="#" aria-label="Medium">
-                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                           d="M3.64335 6.05325C3.65356 5.95181 3.63989 5.84938 3.60342 5.75416C3.56696 5.65895 3.50872 5.57359 3.43335 5.50492L1.87669 3.61575V3.33325H6.70835L10.4434 11.5874L13.7267 3.33325H18.3334V3.61575L17.0025 4.89992C16.9461 4.94346 16.9026 5.0015 16.8766 5.06784C16.8507 5.13418 16.8432 5.20633 16.855 5.27659V14.7216C16.8432 14.7918 16.8507 14.864 16.8766 14.9303C16.9026 14.9967 16.9461 15.0547 17.0025 15.0983L18.3025 16.3833V16.6666H11.7659V16.3841L13.1125 15.0674C13.245 14.9341 13.245 14.8949 13.245 14.6916V7.05659L9.50169 16.6349H8.99669L4.63835 7.05659V13.4766C4.60252 13.7458 4.69169 14.0183 4.88002 14.2133L6.63085 16.3533V16.6349H1.66669V16.3533L3.41669 14.2133C3.50928 14.1166 3.578 13.9997 3.61736 13.8718C3.65671 13.7439 3.66562 13.6085 3.64335 13.4766V6.05325Z" />
-                     </svg>
-                  </a>
-               </li>
-            </ul>
-         </div>
-      </div>
-   </footer>
+      </footer>
+      <!-- footer -->
+   </div>
    
 
+   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
    <script src="js/inputmask.min.js"></script>
    <script src="js/just-validate.min.js"></script>
