@@ -264,14 +264,14 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   // Карта яндекс
-  ymaps.ready(init);
-  function init() {
-    let myMap = new ymaps.Map("yandexMap", {
-      center: [55.706873069029804, 37.80265250000001],
-      zoom: 16,
-    });
-  }
-  
+  // ymaps.ready(init);
+  // function init() {
+  //   let myMap = new ymaps.Map("yandexMap", {
+  //     center: [55.706873069029804, 37.80265250000001],
+  //     zoom: 16,
+  //   });
+  // }
+
 });
 
 
