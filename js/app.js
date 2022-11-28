@@ -2,15 +2,24 @@
 
 document.addEventListener('DOMContentLoaded', function () {
   // Аккордион
-  document
-    .querySelector(".faq-accordion")
-    .addEventListener("click", (event) => {
-      if (event.target.closest(".faq-accordion__item")) {
-        event.target
-          .closest(".faq-accordion__item")
-          .classList.toggle("faq-accordion__item--active");
+  const accordions = document.querySelectorAll('.accordion');
+  accordions.forEach(el => {
+    el.addEventListener('click', (e) => {
+      const self = e.currentTarget;
+      const control = self.querySelector('.accordion__control');
+      const content = self.querySelector('.accordion__content');
+
+      self.classList.toggle('open');
+
+      if(self.contains.classList('open')) {
+        control.setAttribute("aria-expanded", true);
+        content.setAttribute("aria-hidden", false);
+      } else {
+        control.setAttribute("aria-expanded", false);
+        content.setAttribute("aria-hidden", true);
       }
-    });
+    })
+  })
 
   // Мобильное бургер-меню
   const burger = document.querySelector("#burger");
@@ -262,18 +271,7 @@ document.addEventListener('DOMContentLoaded', function () {
     mirror: false, // whether elements should animate out while scrolling past them
     anchorPlacement: "top-bottom", // defines which position of the element regarding to window should trigger the animation
   });
-
-  // Карта яндекс
-  // ymaps.ready(init);
-  // function init() {
-  //   let myMap = new ymaps.Map("yandexMap", {
-  //     center: [55.706873069029804, 37.80265250000001],
-  //     zoom: 16,
-  //   });
-  // }
-
 });
-
 
 
   

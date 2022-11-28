@@ -34,9 +34,9 @@ body {
 }
 
 .container {
-   max-width: 1220px;
+   max-width: 1230px;
    margin: auto;
-   padding: 0 20px;
+   padding: 0 15px;
 }
 
 .btn {
@@ -931,7 +931,7 @@ body {
 
 // === consultation ===
 .section-consultation {
-  background: linear-gradient(rgba(26, 42, 92, 0.7), rgba(26,42,92,.8)), url("../img/intro/hero_bg_2.webp") no-repeat fixed top center;
+  background: linear-gradient(rgba(26, 42, 92, 0.8), rgba(26,42,92,.9)), url("../img/intro/hero_bg_2.webp") no-repeat fixed top center;
   background-size: cover;
   padding: 50px 0 70px;
   margin: 50px 0 100px;
@@ -970,7 +970,7 @@ body {
       height: 50px;
       
       &:focus {
-        outline: 1px solid #4C5C68;
+        outline: 1px solid $color-base;
       }
 
       &::placeholder {
@@ -1029,68 +1029,102 @@ body {
   }
 }
 
-.faq-accordion {
-    &__item {
-      $parent: &;
-      border-bottom: 1px solid #e5e9eb;
-      
-      &--active {
+.accordion {
+  border-bottom: 1px solid #e5e9eb;
 
-        #{$parent}-trigger {
-          color: $color-active;
-          font-weight: 500;
+  &__control {
+    width: 100%;
+    text-align: left;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-          &-icon  {
-          transform: rotate(180deg); 
-
-          .faq-arrow {
-              fill: $color-active;
-            }
-          }
-        }
-          
-        #{$parent}-content {
-          display: flex;
-        }
-      }
-
-      &-trigger {
-        display: flex;
-        padding: 16px;
-        cursor: pointer;
-
-        &-icon {
-          width: 15px;
-          margin-right: 16px;
-          text-align: center;
-
-          .faq-arrow {
-            fill: #e5e9eb;
-          }
-        }
-      }
-      
-      &-content {
-        display: none;
-        padding: 0 50px 16px;
-
-        &-text {
-          font-size: 16px;
-        }
-      }
+    &:hover {
+      box-shadow: -1px 10px 30px -15px rgba(0,0,0,0.30);
+      -webkit-box-shadow: -1px 10px 30px -15px rgba(0,0,0,0.30);
+      -moz-box-shadow: -1px 10px 30px -15px rgba(0,0,0,0.30);
     }
-  } 
 
-  @media (max-width: 575px) {
-    .faq-accordion {
-      &__item {
-        &-content {
-        &-text {
-          font-size: 14px;
-        }
-      }
+    @media (max-width: 575px) {
+      padding: 10px 20px 10px 10px;
     }
   }
+
+  &__text {
+    font-size: 18px;
+    font-weight: 500;
+    color: $color-base;
+
+    @media (max-width: 575px) {
+      font-size: 14px;
+    }
+  }
+
+  &__icon {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    padding: 10px;
+    border-radius: 100%;
+    background-color: transparent;
+
+    &:hover {
+      background-color: #e5e9eb;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 50%;
+      height: 1px;
+      background-color:$color-base;
+      transform: translate(-50%, -50%);
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 1px;
+      height: 50%;
+      background-color: $color-base;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &__content {
+    display: none;
+    padding: 10px 30px 10px 15px;
+    font-size: 14px;
+
+    @media (max-width: 575px) {
+      font-size: 12px;
+      padding: 5px 20px 10px 10px;
+    }
+  }
+}
+
+.open .accordion__content {
+  display: block;
+}
+
+.open .accordion__icon {
+  transform: rotate(45deg);
+}
+
+.open .accordion__text {
+  color: $color-active;
+}
+
+.open .accordion__control {
+  box-shadow: -1px 10px 30px -15px rgba(0,0,0,0.30);
+  -webkit-box-shadow: -1px 10px 30px -15px rgba(0,0,0,0.30);
+  -moz-box-shadow: -1px 10px 30px -15px rgba(0,0,0,0.30);
 }
 // === / faq ===
 

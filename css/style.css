@@ -25,9 +25,9 @@ body {
 }
 
 .container {
-  max-width: 1220px;
+  max-width: 1230px;
   margin: auto;
-  padding: 0 20px;
+  padding: 0 15px;
 }
 
 .btn {
@@ -985,9 +985,9 @@ body {
   }
 }
 .section-consultation {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(26, 42, 92, 0.7)), to(rgba(26, 42, 92, 0.8))), url("../img/intro/hero_bg_2.webp") no-repeat fixed top center;
-  background: -o-linear-gradient(rgba(26, 42, 92, 0.7), rgba(26, 42, 92, 0.8)), url("../img/intro/hero_bg_2.webp") no-repeat fixed top center;
-  background: linear-gradient(rgba(26, 42, 92, 0.7), rgba(26, 42, 92, 0.8)), url("../img/intro/hero_bg_2.webp") no-repeat fixed top center;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(26, 42, 92, 0.8)), to(rgba(26, 42, 92, 0.9))), url("../img/intro/hero_bg_2.webp") no-repeat fixed top center;
+  background: -o-linear-gradient(rgba(26, 42, 92, 0.8), rgba(26, 42, 92, 0.9)), url("../img/intro/hero_bg_2.webp") no-repeat fixed top center;
+  background: linear-gradient(rgba(26, 42, 92, 0.8), rgba(26, 42, 92, 0.9)), url("../img/intro/hero_bg_2.webp") no-repeat fixed top center;
   background-size: cover;
   padding: 50px 0 70px;
   margin: 50px 0 100px;
@@ -1114,54 +1114,111 @@ body {
     padding-bottom: 60px;
   }
 }
-.faq-accordion__item {
+.accordion {
   border-bottom: 1px solid #e5e9eb;
 }
-.faq-accordion__item--active .faq-accordion__item-trigger {
-  color: #1A2A5C;
-  font-weight: 500;
-}
-.faq-accordion__item--active .faq-accordion__item-trigger-icon {
-  -webkit-transform: rotate(180deg);
-      -ms-transform: rotate(180deg);
-          transform: rotate(180deg);
-}
-.faq-accordion__item--active .faq-accordion__item-trigger-icon .faq-arrow {
-  fill: #1A2A5C;
-}
-.faq-accordion__item--active .faq-accordion__item-content {
+.accordion__control {
+  width: 100%;
+  text-align: left;
+  padding: 15px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
-.faq-accordion__item-trigger {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 16px;
-  cursor: pointer;
+.accordion__control:hover {
+  box-shadow: -1px 10px 30px -15px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: -1px 10px 30px -15px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: -1px 10px 30px -15px rgba(0, 0, 0, 0.3);
 }
-.faq-accordion__item-trigger-icon {
-  width: 15px;
-  margin-right: 16px;
-  text-align: center;
-}
-.faq-accordion__item-trigger-icon .faq-arrow {
-  fill: #e5e9eb;
-}
-.faq-accordion__item-content {
-  display: none;
-  padding: 0 50px 16px;
-}
-.faq-accordion__item-content-text {
-  font-size: 16px;
-}
-
 @media (max-width: 575px) {
-  .faq-accordion__item-content-text {
+  .accordion__control {
+    padding: 10px 20px 10px 10px;
+  }
+}
+.accordion__text {
+  font-size: 18px;
+  font-weight: 500;
+  color: #4C5C68;
+}
+@media (max-width: 575px) {
+  .accordion__text {
     font-size: 14px;
   }
 }
+.accordion__icon {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  padding: 10px;
+  border-radius: 100%;
+  background-color: transparent;
+}
+.accordion__icon:hover {
+  background-color: #e5e9eb;
+}
+.accordion__icon::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 50%;
+  height: 1px;
+  background-color: #4C5C68;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.accordion__icon::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 1px;
+  height: 50%;
+  background-color: #4C5C68;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.accordion__content {
+  display: none;
+  padding: 10px 30px 10px 15px;
+  font-size: 14px;
+}
+@media (max-width: 575px) {
+  .accordion__content {
+    font-size: 12px;
+    padding: 5px 20px 10px 10px;
+  }
+}
+
+.open .accordion__content {
+  display: block;
+}
+
+.open .accordion__icon {
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.open .accordion__text {
+  color: #1A2A5C;
+}
+
+.open .accordion__control {
+  box-shadow: -1px 10px 30px -15px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: -1px 10px 30px -15px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: -1px 10px 30px -15px rgba(0, 0, 0, 0.3);
+}
+
 .section-contacts__inner {
   display: -webkit-box;
   display: -ms-flexbox;

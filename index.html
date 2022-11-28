@@ -60,7 +60,7 @@
                </nav>
             </div>
          </div>
-      </header> <!-- / header -->
+      </header> <!-- / .header -->
 
       <main>
          <!-- intro -->
@@ -74,7 +74,7 @@
                      консультация</button>
                </div>
             </div>
-         </section> <!-- / intro  -->
+         </section> <!-- / .intro  -->
 
          <!-- Pop-up -->
          <div class="popup__bg">
@@ -96,7 +96,7 @@
                <button class="popup__btn" type="submit">Перезвоните мне</button>
             </form>
          </div>
-         <!-- Pop-up -->
+         <!-- / .Pop-up -->
 
          <!-- offer -->
          <section class="offer section-offer">
@@ -161,7 +161,7 @@
                   </form>
                </div>
             </div>
-         </section> <!-- / offer -->
+         </section> <!-- / .offer -->
 
          <!-- about -->
          <section class="about section-about" id="about">
@@ -180,7 +180,7 @@
                   </div>
                </div>
             </div>
-         </section> <!-- / about -->
+         </section> <!-- / .about -->
 
          <!-- / numbers -->
          <div class="numbers section-numbers">
@@ -233,7 +233,7 @@
                   </div>
                </div>
             </div>
-         </section> <!-- / features -->
+         </section> <!-- / .features -->
 
          <!-- services -->
          <section class="services section-services" id="services">
@@ -288,7 +288,7 @@
                   </div>
                </div>
             </div>
-         </section> <!-- / services -->
+         </section> <!-- / .services -->
 
          <!-- testimonials -->
          <section class="testimonials section-testimonials hide" id="testimonials">
@@ -325,7 +325,7 @@
 
                </div>
             </div>
-         </section> <!-- / testimonials -->
+         </section> <!-- / .testimonials -->
 
          <!-- consultation -->
          <section class="consultation section-consultation">
@@ -351,7 +351,7 @@
                   </form>
                </div>
             </div>
-         </section> <!-- / consultation  -->
+         </section> <!-- / .consultation  -->
 
          <!-- faq -->
          <section class="faq section-faq" id="faq">
@@ -359,105 +359,58 @@
                <div class="section-faq__inner">
                   <h3 class="title base-title" data-aos="zoom-in">Ответы на вопросы</h3>
 
-                  <ul class="faq-accordion">
-                     <li class="faq-accordion__item">
-                        <div class="faq-accordion__item-trigger">
-                           <div class="faq-accordion__item-trigger-icon">
-                              <svg width="20" height="14" viewBox="0 0 20 14" fill="none"
-                                 xmlns="http://www.w3.org/2000/svg">
-                                 <path class="faq-arrow"
-                                    d="M3.15233 1.43973C2.62199 0.803311 1.67614 0.717325 1.03972 1.24767C0.403309 1.77802 0.317323 2.72386 0.847669 3.36028L3.15233 1.43973ZM10 12L8.84767 12.9603C9.13266 13.3023 9.55483 13.5 10 13.5C10.4452 13.5 10.8673 13.3023 11.1523 12.9603L10 12ZM19.1523 3.36028C19.6827 2.72386 19.5967 1.77802 18.9603 1.24767C18.3239 0.717324 17.378 0.80331 16.8477 1.43973L19.1523 3.36028ZM0.847669 3.36028L8.84767 12.9603L11.1523 11.0397L3.15233 1.43973L0.847669 3.36028ZM11.1523 12.9603L19.1523 3.36028L16.8477 1.43973L8.84767 11.0397L11.1523 12.9603Z" />
-                              </svg>
-                           </div>
-                           <p class="faq-accordion__item-trigger-text">Как быстро вы сможете оформить сертификат/декларацию?</p>
-                        </div>
-                        <div class="faq-accordion__item-content">
-                           <p class="faq-accordion__item-content-text">Стандартная процедура это 3 дня. Мы постараемся
-                              сделать быстрее насколько это возможно. Если же со стороны заказчика нет задержек в подаче
-                              заявки и оплате и ему надо срочно - мы можем оформить документацию в течение 2 часов!
-                           </p>
+                  <ul class="accordion__list">
+                     <li class="accordion">
+                        <button class="accordion__control" aria-expanded="false">
+                           <span class="accordion__text">Как быстро вы сможете оформить сертификат/декларацию?</span>
+                           <span class="accordion__icon"></span>
+                        </button>
+                        <div class="accordion__content" aria-hidden="true">
+                           Стандартная процедура это 3 дня. Мы постараемся
+                           сделать быстрее насколько это возможно. Если же со стороны заказчика нет задержек в подаче
+                           заявки и оплате и ему надо срочно - мы можем оформить документацию в течение 2 часов!
                         </div>
                      </li>
-
-                     <li class="faq-accordion__item">
-                        <div class="faq-accordion__item-trigger">
-                           <div class="faq-accordion__item-trigger-icon">
-                              <svg width="20" height="14" viewBox="0 0 20 14" fill="none"
-                                 xmlns="http://www.w3.org/2000/svg">
-                                 <path class="faq-arrow"
-                                    d="M3.15233 1.43973C2.62199 0.803311 1.67614 0.717325 1.03972 1.24767C0.403309 1.77802 0.317323 2.72386 0.847669 3.36028L3.15233 1.43973ZM10 12L8.84767 12.9603C9.13266 13.3023 9.55483 13.5 10 13.5C10.4452 13.5 10.8673 13.3023 11.1523 12.9603L10 12ZM19.1523 3.36028C19.6827 2.72386 19.5967 1.77802 18.9603 1.24767C18.3239 0.717324 17.378 0.80331 16.8477 1.43973L19.1523 3.36028ZM0.847669 3.36028L8.84767 12.9603L11.1523 11.0397L3.15233 1.43973L0.847669 3.36028ZM11.1523 12.9603L19.1523 3.36028L16.8477 1.43973L8.84767 11.0397L11.1523 12.9603Z" />
-                              </svg>
-                           </div>
-                           <p class="faq-accordion__item-trigger-text">Можно ли оформить сертификат/декларация дистанционно?
-                           </p>
-                        </div>
-                        <div class="faq-accordion__item-content">
-                           <p class="faq-accordion__item-content-text">Конечно, все согласования и отправка документов
-                              происходит в режиме онлайн через электронную почту, мессенджеры, по телефону - через
-                              удобный для вас канал. Отправка готовой документации - курьером на ваш адрес. </p>
+                     <li class="accordion">
+                        <button class="accordion__control" aria-expanded="false">
+                           <span class="accordion__text">Можно ли оформить сертификат/декларация дистанционно?</span>
+                           <span class="accordion__icon"></span>
+                        </button>
+                        <div class="accordion__content" aria-hidden="true">
+                           Конечно, все согласования и отправка документов
+                           происходит в режиме онлайн через электронную почту, мессенджеры, по телефону - через
+                           удобный для вас канал. Отправка готовой документации - курьером на ваш адрес.
                         </div>
                      </li>
-
-                     <li class="faq-accordion__item">
-                        <div class="faq-accordion__item-trigger">
-                           <div class="faq-accordion__item-trigger-icon">
-                              <svg width="20" height="14" viewBox="0 0 20 14" fill="none"
-                                 xmlns="http://www.w3.org/2000/svg">
-                                 <path class="faq-arrow"
-                                    d="M3.15233 1.43973C2.62199 0.803311 1.67614 0.717325 1.03972 1.24767C0.403309 1.77802 0.317323 2.72386 0.847669 3.36028L3.15233 1.43973ZM10 12L8.84767 12.9603C9.13266 13.3023 9.55483 13.5 10 13.5C10.4452 13.5 10.8673 13.3023 11.1523 12.9603L10 12ZM19.1523 3.36028C19.6827 2.72386 19.5967 1.77802 18.9603 1.24767C18.3239 0.717324 17.378 0.80331 16.8477 1.43973L19.1523 3.36028ZM0.847669 3.36028L8.84767 12.9603L11.1523 11.0397L3.15233 1.43973L0.847669 3.36028ZM11.1523 12.9603L19.1523 3.36028L16.8477 1.43973L8.84767 11.0397L11.1523 12.9603Z" />
-                              </svg>
-                           </div>
-                           <p class="faq-accordion__item-trigger-text">Как проверить подлинность сертификата?
-                           </p>
-                        </div>
-                        <div class="faq-accordion__item-content">
-                           <p class="faq-accordion__item-content-text">Существуют реестры, где регистрируются номера
-                              оформленных документов. Вы самостоятельно можете проверить наличие сертификата в данном
-                              реестре. При необходимости ссылки на сайты реестров будут предоставлены нашими
-                              менеджерами. </p>
+                     <li class="accordion">
+                        <button class="accordion__control" aria-expanded="false">
+                           <span class="accordion__text">Как проверить подлинность сертификата?</span>
+                           <span class="accordion__icon"></span>
+                        </button>
+                        <div class="accordion__content" aria-hidden="true">
+                           Существуют реестры, где регистрируются номера
+                           оформленных документов. Вы самостоятельно можете проверить наличие сертификата в данном
+                           реестре. При необходимости ссылки на сайты реестров будут предоставлены нашими
+                           менеджерами.
                         </div>
                      </li>
-
-                     <li class="faq-accordion__item">
-                        <div class="faq-accordion__item-trigger">
-                           <div class="faq-accordion__item-trigger-icon">
-                              <svg width="20" height="14" viewBox="0 0 20 14" fill="none"
-                                 xmlns="http://www.w3.org/2000/svg">
-                                 <path class="faq-arrow"
-                                    d="M3.15233 1.43973C2.62199 0.803311 1.67614 0.717325 1.03972 1.24767C0.403309 1.77802 0.317323 2.72386 0.847669 3.36028L3.15233 1.43973ZM10 12L8.84767 12.9603C9.13266 13.3023 9.55483 13.5 10 13.5C10.4452 13.5 10.8673 13.3023 11.1523 12.9603L10 12ZM19.1523 3.36028C19.6827 2.72386 19.5967 1.77802 18.9603 1.24767C18.3239 0.717324 17.378 0.80331 16.8477 1.43973L19.1523 3.36028ZM0.847669 3.36028L8.84767 12.9603L11.1523 11.0397L3.15233 1.43973L0.847669 3.36028ZM11.1523 12.9603L19.1523 3.36028L16.8477 1.43973L8.84767 11.0397L11.1523 12.9603Z" />
-                              </svg>
-                           </div>
-                           <p class="faq-accordion__item-trigger-text">Когда к вам можно обратиться?</p>
-                        </div>
-                        <div class="faq-accordion__item-content">
-                           <p class="faq-accordion__item-content-text">Вы можете оставить заявку на нашем сайте в любое
-                              время суток, а затем специалист по сертификации свяжется с вами в рабочее время (пн-пт с
-                              9:00 до 18:00).</p>
-                        </div>
-                     </li>
-
-                     <li class="faq-accordion__item">
-                        <div class="faq-accordion__item-trigger">
-                           <div class="faq-accordion__item-trigger-icon">
-                              <svg width="20" height="14" viewBox="0 0 20 14" fill="none"
-                                 xmlns="http://www.w3.org/2000/svg">
-                                 <path class="faq-arrow"
-                                    d="M3.15233 1.43973C2.62199 0.803311 1.67614 0.717325 1.03972 1.24767C0.403309 1.77802 0.317323 2.72386 0.847669 3.36028L3.15233 1.43973ZM10 12L8.84767 12.9603C9.13266 13.3023 9.55483 13.5 10 13.5C10.4452 13.5 10.8673 13.3023 11.1523 12.9603L10 12ZM19.1523 3.36028C19.6827 2.72386 19.5967 1.77802 18.9603 1.24767C18.3239 0.717324 17.378 0.80331 16.8477 1.43973L19.1523 3.36028ZM0.847669 3.36028L8.84767 12.9603L11.1523 11.0397L3.15233 1.43973L0.847669 3.36028ZM11.1523 12.9603L19.1523 3.36028L16.8477 1.43973L8.84767 11.0397L11.1523 12.9603Z" />
-                              </svg>
-                           </div>
-                           <p class="faq-accordion__item-trigger-text">Нужны ли образцы для оформления документа?</p>
-                        </div>
-                        <div class="faq-accordion__item-content">
-                           <p class="faq-accordion__item-content-text">Для разработки нормативно-технической
-                              документации образцы не нужны. Для остальной документации на продукцию собственного
-                              производства образцы будут необходимы.</p>
+                     <li class="accordion">
+                        <button class="accordion__control" aria-expanded="false">
+                           <span class="accordion__text">Нужны ли образцы для оформления документа?</span>
+                           <span class="accordion__icon"></span>
+                        </button>
+                        <div class="accordion__content" aria-hidden="true">
+                           Для разработки нормативно-технической
+                           документации образцы не нужны. Для остальной документации на продукцию собственного
+                           производства образцы будут необходимы.
                         </div>
                      </li>
                   </ul>
-
                </div>
             </div>
-         </section><!-- / faq -->
+         </section>
+         <!-- / .faq -->
+
 
          <!-- contacts -->
          <section class="contacts section-contacts" id="contacts">
@@ -483,7 +436,7 @@
             <script type="text/javascript" charset="utf-8" async
                src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ad28f88a67493f47c958a81a995bcbeff23e5a997f4f54ca2605b99eab1c2d3cc&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true">
             </script>
-         </div> <!-- / map -->
+         </div> <!-- / .map -->
 
          <!-- questions -->
          <section class="questions section-questions">
@@ -571,7 +524,7 @@
             </div>
          </div>
       </footer>
-      <!-- footer -->
+      <!-- / .footer -->
    </div>
    
 
